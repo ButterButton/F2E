@@ -1,0 +1,165 @@
+@charset "UTF-8"
+
+//Color
+$blue: rgba(2,166,209,0.8)
+$brown: #c17151
+$darkblue: #032C3F
+$green: rgba(6, 214, 160, 0.8)
+$orange: #fd7d36
+$pink: #f1b8e4
+$white: #F2F2F2
+$yellow: rgba(255, 209, 102, 0.8)
+
+//Size
+
+@mixin font_size($font-size)
+    font-size: $font-size
+
+@mixin font_height($height)
+    height: $height
+
+@mixin font_width($width)
+    width: $width
+
+*
+    font-family: 'Jua', sans-serif, '微軟正黑體'
+    // border: solid 1px 
+    user-select: none
+
+html,body
+    background-color: $darkblue
+    padding: 0
+    margin: 0
+
+
+.travel
+    background-color: white   
+    +font_height(1045px) 
+    +font_width(1200px)
+    margin-left: 10%
+
+    
+
+.navbar
+    +font_height(92px)
+    +font_width(auto)
+    
+    
+.logo
+    +font_size(40px)
+    line-height: 45px 
+    display: inline-block
+    transform: translate(78px,24px)
+
+.t,.a,.i,.n,.a2,.n2
+    display: inline-block
+
+.t
+    color: $pink
+
+.a
+    color: $orange
+
+.i
+    color: $yellow
+
+.n
+    color: $green
+
+.a2
+    color: $blue
+
+.n2
+    color: $brown
+    
+#input
+    border: none
+    border-bottom: 2px solid
+    
+
+.search
+    display: inline-block
+    transform: translate(424px,37px)
+
+
+.subject
+    +font_height(953px)
+    +font_width(1200px)
+    background-color: #F7F9FA
+
+.location
+    background-color: $white
+    // border: solid 1px
+    +font_width(300px)
+    +font_height(127px)
+    transform: translate(38px,0px)
+    border-bottom: solid 1px
+
+
+.location p
+    +font_size(20px)
+    margin-left: 5px
+    transform: translate(78px,10px)
+
+.location select
+    +font_width(130px)
+    +font_height(20px)
+    transform: translate(85px,15px)
+
+
+.categories
+    background-color: $white
+    // border: solid 1px
+    +font_width(300px)
+    +font_height(225px)
+    transform: translate(38px,-20px)
+
+.categories p
+    +font_size(20px)
+    margin-left: 5px
+    transform: translate(78px,10px)
+
+.categories form
+    +font_size(16px)
+    margin-left: 5px
+    margin-top: -5px
+    transform: translate(78px,10px)
+
+.categories input
+    margin-top: 10px
+
+.info  
+    transform: translate(600px,-390px)
+    +font_width(250px)
+
+
+.info p
+    +font_size(24px)
+
+.tag p 
+    +font_size(16px)
+    display: inline-block
+    margin-top: 0px
+    border: solid 1px
+    border-radius: 5px
+
+.article
+    +font_width(670px)
+    transform: translate(500px,-385px)
+    padding: 5px
+    background-color: #FFF
+    border-radius: 5px
+    margin-bottom: 10px  
+
+.title 
+    +font_width(300px)
+
+
+.brief 
+    +font_width(500px)
+    +font_height(60px)
+    +font_size(16px)
+    overflow: hidden
+
+.fa-map-marker-alt
+    margin-right: 40px

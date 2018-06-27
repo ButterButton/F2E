@@ -1,0 +1,19 @@
+.todo
+  .row
+    .task 尚未進行
+    .processing 進行中
+    .done 已完成
+  input.addtask(v-model='message'  type="text" id="inputtask")
+  .columns
+    .form1
+      #task1.task(v-bind:title='spec') {{message}}
+      .far.fa-check-circle
+      .far.fa-star
+      .far.fa-edit
+      .far.fa-file
+    .form2 
+      #task2.task(v-bind:title='spec') {{message}}
+      .far.fa-check-circle
+      .far.fa-star
+      .far.fa-edit
+      .far.fa-file

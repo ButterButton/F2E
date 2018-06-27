@@ -1,0 +1,87 @@
+@charset "UTF-8"
+//Color
+$darkblue: #032C3F
+$white: #FFFFFF
+$gray:#9b9b9b
+$yellow: rgba(255, 209, 102, 0.8)
+$green:rgba(6, 214, 160, 0.8)
+
+//Size
+$card: 80%
+
+*
+  font-family: 'Jua', sans-serif
+  // border: solid 1px
+  user-select: none
+  
+html,body
+  // margin: 0px auto
+  background-color: $darkblue
+
+  
+.todo 
+  background-color: $white
+  width: 400px
+  margin-right: auto
+  margin-left: auto
+  margin-top: 60px
+  border-radius: 5px
+  border: solid 1px
+  padding: 30px 0px 30px 30px
+
+.todo input
+  margin-top: 10px
+  margin-bottom: 10px
+  border-radius: 5px
+  font-size: 15px
+  padding-left: 10px
+  padding-top: 3px
+
+.row
+  width: $card
+
+.columns
+  width: 80%
+  border-bottom : solid 1px
+
+.form
+  background-color: $white
+  cursor: pointer
+  margin-bottom: 10px
+  &:hover
+    background-color: $yellow
+  
+
+.form p
+  display: inline-block
+  margin-left: 10px
+  padding-left: 20px
+
+.right
+  display: inline-block
+  float: right
+  margin-top: 20px
+  margin-right: 10px
+
+.obj
+  margin-left: 20px
+  margin-top: 5px
+
+.star
+  color: $green
+
+.fa-comment
+  margin-left: 35px
+
+.fa-calendar-check
+  margin-left: 5px
+
+.bottom
+  
+
+.bottom p
+  display: inline-block
+  margin-right: 10px
+  margin-left: 5px
+  color: $gray
+  cursor: pointer

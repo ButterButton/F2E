@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Stage1 . todolist</title>
+    <link rel='stylesheet prefetch' href='https://use.fontawesome.com/releases/v5.0.13/css/all.css'>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Jua|Oxygen" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="todo">
+        <div class="row">2018-06-06</div>
+        <input type="text" v-model="message" id="input">
+        <div class="columns">
+            <div class="form" id="form1">
+                <div class="far fa-check-circle"></div>
+                <p v-bind:title="spec">{{message}}</p>
+                <div class="right">
+                    <div class="far fa-star"></div>
+                </div>
+                <div class="obj">
+                    <div class="far fa-comment"></div>
+                    <div class="far fa-calendar-check"></div>
+                </div>
+            </div>
+            <div class="form" id="form2">
+                <div class="far fa-check-circle" id="no1"></div>
+                <p v-bind:title="spec">{{message}}</p>
+                <div class="right">
+                    <div class="far fa-star"></div>
+                </div>
+                <div class="obj">
+                    <div class="far fa-comment"></div>
+                    <div class="far fa-calendar-check"></div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <p>All</p>
+            <p>In progress</p>
+            <p>Finish</p>
+        </div>
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js'></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+    <script src="js/jquery.js"></script>
+</body>
+
+</html>
