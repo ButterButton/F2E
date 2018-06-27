@@ -12,6 +12,10 @@ $rows-size: 100px
 @mixin font_size($font-size)
     font-size: $font-size
 
+@mixin spec
+    background-image: -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0.2, $green), color-stop(0.2, transparent), color-stop(0.5, transparent), color-stop(0.5, $green), color-stop(0.7, $green), color-stop(0.7, transparent), to(transparent))
+
+
 html, body
     font-family: 'Jua', sans-serif, '微軟正黑體'
 
@@ -45,14 +49,16 @@ html, body
     text-align: center
     transform: translateY(25%)
     position: relative
+    &::before
+        content: attr(text) 
+        color: rgba(0, 0, 0, 0.3)
+        height: 21px
+        overflow: hidden
+        margin-top: -10px
+        position: absolute
 
-.title::before
-    content: attr(text) 
-    color: rgba(0, 0, 0, 0.3)
-    height: 21px
-    overflow: hidden
-    margin-top: -10px
-    position: absolute
+.theme_img
+    cursor: pointer
 
 .theme1
     display: grid
@@ -92,7 +98,7 @@ html, body
 .theme1 .theme_spec
     grid-area: 6 / 1 / 7 / 3
     background-size: 40px 40px
-    background-image: -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0.25, $green), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, $green), color-stop(0.75, $green), color-stop(0.75, transparent), to(transparent))
+    +spec
     transform: translate(25%, -50%)
     z-index: 2
 
@@ -217,7 +223,7 @@ html, body
 .theme4 .theme_spec
     grid-area: 5 / 2 / 6 / 4
     background-size: 40px 40px
-    background-image: -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0.25, $green), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, $green), color-stop(0.75, $green), color-stop(0.75, transparent), to(transparent))
+    +spec    
     transform: translateY(50%)
     z-index: 2
 
@@ -262,7 +268,7 @@ html, body
 .theme5 .theme_spec
     grid-area: 1 / 1 / 2 / 3
     background-size: 40px 40px
-    background-image: -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0.25, $green), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, $green), color-stop(0.75, $green), color-stop(0.75, transparent), to(transparent))
+    +spec    
     transform: translate(30%, 50%)
     z-index: 2
 
@@ -321,7 +327,7 @@ html, body
     background-size: cover 
     background-repeat: no-repeat 
     background-position: center
-    width: 300px
+    width: 240px
     height: 400px
     z-index: 1
 
@@ -330,24 +336,23 @@ html, body
     grid-area: 2 / 3 / 4 / 4
     +font_size(48px)
     line-height: 48px
-    text-align: right
+    justify-self: start
     writing-mode: vertical-rl
     z-index: 1
 
 .theme7 .theme_block
     grid-area: 1 / 1 / 5 / 3
     border: 20px solid $green
-    transform: translateX(50%)
+    transform: translateX(25%)
 
 .theme7 .theme_num
     +font_size(48px)
     grid-area: 5 / 3 / 6 / 4
     align-self: end
     text-align: right
-    transform: translateX(50%)
     z-index: 1
 
 .theme7 .theme_spec
     background-color: $green
     grid-area: 4 / 3 / 6 / 4
-    transform: translateX(50%)
+
