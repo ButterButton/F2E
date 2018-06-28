@@ -19,7 +19,7 @@ $rows-size: 100px
 html, body
     font-family: 'Jua', sans-serif, '微軟正黑體'
 
-.container
+.container, .main
     // text-align: center
     margin: 0px auto
     width: 960px
@@ -37,7 +37,7 @@ html, body
     background-color: $black
     color: $white
     width: 100px
-    height: 25px
+    height: 24px
     text-align: center
     justify-self: center
  
@@ -356,3 +356,135 @@ html, body
     background-color: $green
     grid-area: 4 / 3 / 6 / 4
 
+.sticker
+    display: grid
+    grid-area: 1 / 1 / 2 / 3
+    grid-template-rows: repeat(1, $rows-size)
+    grid-template-columns: repeat(3, $columns-size)
+    text-transform: uppercase
+    text-decoration: none
+    color: $black
+    cursor: pointer
+    .logo
+        grid-area: 1 / 2 / 2 / 3
+        align-self: center
+    .fas
+        grid-area: 1 / 1 / auto / auto
+        align-self: center
+        justify-self: end
+        +font_size(24px)
+
+.cover
+    display: grid
+    grid-area: 2 / 1 / 8 / 9
+    grid-template-rows: repeat(6, $rows-size)
+    grid-template-columns: repeat(8, $columns-size)
+    text-transform: uppercase
+    .cover_title
+        position: relative
+        display: inline-block
+        grid-area: 1 / 6 / 2 / 8
+        +font_size(48px)
+        justify-self: end
+        align-self: end
+        &::after
+            content: "broken"
+            writing-mode: vertical-rl
+            position: absolute
+            top: 100%
+            right: -40%
+    .cover_block
+        grid-area: 1 / 1 / 3 / 3
+        background-color: $green
+        transform: translate(25%, 25%)
+    .cover_img
+        grid-area: 2 / 2 / auto / auto 
+        background-image: url('../pic/theme1.jpg')
+        background-size: cover 
+        background-repeat: no-repeat 
+        background-position: center
+        width: 720px
+        height: 400px
+        z-index: 1
+    .cover_font
+        position: relative
+        display: inline-block
+        +font_size(48px)
+        grid-area: 6 / 2 / 7 / 3
+        transform: rotate(-180deg)
+        align-self: start
+        justify-self: start
+        &::after
+            content: "01"
+            writing-mode: vertical-lr
+            position: absolute
+            top: 100%
+            right: -55%
+    .cover_spec
+        grid-area: 4 / 4 / 6 / 8
+        border: 20px solid $green
+        transform: translate(15% ,25%)
+
+.article
+    display: grid
+    grid-area: 9 / 1 / 13 / 9
+    grid-template-rows: repeat(4, $rows-size)
+    grid-template-columns: repeat(8, $columns-size)
+    text-transform: uppercase
+    .article_title
+        grid-area: 1 / 3 / 2 / 7
+        +font_size(48px)
+    .article_text
+        grid-area: 1 / 3 / 2 / 7
+        +font_size(24px)
+        align-self: end
+    .article_content
+        grid-area: 2 / 3 / 5 / 8
+        +font_size(16px)
+        line-height: 24px
+    .article_annotation
+        grid-area: 1 / 2 / 3 / 3
+        +font_size(24px)
+        writing-mode: vertical-lr
+
+        
+.album
+    display: grid
+    grid-area: 14 / 1 / 21 / 9
+    grid-template-rows: repeat(7, $rows-size)
+    grid-template-columns: repeat(8, $columns-size)
+    text-transform: uppercase
+    .album_broken
+        grid-area: 1 / 2 / auto / auto
+        width: 360px
+        height: 300px 
+        background-image: url('../pic/item/item1.jpg')
+        background-size: cover 
+        background-repeat: no-repeat 
+        background-position: center
+        z-index: 1
+    .album_lens
+        grid-area: 3 / 4 / auto / auto
+        width: 480px
+        height: 400px 
+        background-image: url('../pic/item/item1-2.jpg')
+        background-size: cover 
+        background-repeat: no-repeat 
+        background-position: center
+    .album_block
+        grid-area: 2 / 6 / 4 / 8
+        background-color: $green
+        z-index: -1
+        transform: translateX(25%)
+    .album_spec 
+        grid-area: 6 / 3 / 7 / 5
+        background-size: 40px 40px
+        +spec
+        transform: translate(-25%, 50%)
+        z-index: 2
+    .album_hollow
+        grid-area: 2 / 1 / 4 / 5
+        border: 20px solid $green
+        transform: translate(15% ,25%)
+        z-index: -1
+            

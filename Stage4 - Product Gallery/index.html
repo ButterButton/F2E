@@ -11,60 +11,91 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="logo">SpecLens</div>
-        <div class="title" text="LEN'S TOPS">LEN'S TOPS</div>
-        <div class="theme1">
-            <div class="theme_title">SWIRL</div>
-            <div class="theme_block"></div>
-            <a class="theme_img" href="theme1.html"></a>            
-            <div class="theme_num">01</div>
-            <div class="theme_spec"></div>
-        </div>
-        <div class="theme2">
-            <div class="theme_title">radioactivity</div>
-            <div class="theme_block"></div>
-            <div class="theme_img"></div>
-            <div class="theme_num">02</div>
-            <div class="theme_spec"></div>
-        </div>
-        <div class="theme3">
-            <div class="theme_title">Fish scales</div>
-            <div class="theme_block"></div>
-            <div class="theme_img"></div>
-            <div class="theme_num">03</div>
-            <div class="theme_spec"></div>
-        </div>
-        <div class="theme4">
-            <div class="theme_title">Donut</div>
-            <div class="theme_block"></div>
-            <div class="theme_img"></div>
-            <div class="theme_num">04</div>
-            <div class="theme_spec"></div>
-        </div>
-        <div class="theme5">
-            <div class="theme_title">Bubble</div>
-            <div class="theme_block"></div>
-            <div class="theme_img"></div>
-            <div class="theme_num">05</div>
-            <div class="theme_spec"></div>
-        </div>
-        <div class="theme6">
-            <div class="theme_title">Star</div>
-            <div class="theme_block"></div>
-            <div class="theme_img"></div>
-            <div class="theme_num">06</div>
-            <div class="theme_spec"></div>
-        </div>
-        <div class="theme7">
-            <div class="theme_title">explosion</div>
-            <div class="theme_block"></div>
-            <div class="theme_img"></div>
-            <div class="theme_num">07</div>
-            <div class="theme_spec"></div>
+    <div id="app">
+        <div class="container">
+            <div class="main">
+                <div class="logo">SpecLens</div>
+                <div class="title" text="LEN'S TOPS">LEN'S TOPS</div>
+                <div class="theme1">
+                    <div class="theme_title">SWIRL</div>
+                    <div class="theme_block"></div>
+                    <div class="theme_img"></div>
+                    <div class="theme_num">01</div>
+                    <div class="theme_spec"></div>
+                </div>
+                <div class="theme2">
+                    <div class="theme_title">radioactivity</div>
+                    <div class="theme_block"></div>
+                    <div class="theme_img"></div>
+                    <div class="theme_num">02</div>
+                    <div class="theme_spec"></div>
+                </div>
+                <div class="theme3">
+                    <div class="theme_title">Fish scales</div>
+                    <div class="theme_block"></div>
+                    <div class="theme_img"></div>
+                    <div class="theme_num">03</div>
+                    <div class="theme_spec"></div>
+                </div>
+                <div class="theme4">
+                    <div class="theme_title">Donut</div>
+                    <div class="theme_block"></div>
+                    <div class="theme_img"></div>
+                    <div class="theme_num">04</div>
+                    <div class="theme_spec"></div>
+                </div>
+                <div class="theme5">
+                    <div class="theme_title">Bubble</div>
+                    <div class="theme_block"></div>
+                    <div class="theme_img"></div>
+                    <div class="theme_num">05</div>
+                    <div class="theme_spec"></div>
+                </div>
+                <div class="theme6">
+                    <div class="theme_title">Star</div>
+                    <div class="theme_block"></div>
+                    <div class="theme_img"></div>
+                    <div class="theme_num">06</div>
+                    <div class="theme_spec"></div>
+                </div>
+                <div class="theme7">
+                    <div class="theme_title">explosion</div>
+                    <div class="theme_block"></div>
+                    <div class="theme_img"></div>
+                    <div class="theme_num">07</div>
+                    <div class="theme_spec"></div>
+                </div>
+            </div>
+            <div id="item">
+                <div class="sticker" @click="overview">
+                    <i class="fas fa-arrow-left"></i>
+                    <div class="logo">SpecLens</div>
+                </div>
+                <div class="cover">
+                    <div class="cover_title">SWIRL</div>
+                    <div class="cover_block"></div>
+                    <div class="cover_img"></div>
+                    <div class="cover_font">TOP</div>
+                    <div class="cover_spec"></div>
+                </div>
+                <div class="article">
+                    <div class="article_title">{{article_title}}</div>
+                    <div class="article_text">{{article_text}}</div>
+                    <div class="article_content">{{article_content}}</div>
+                    <div class="article_annotation">PRODUCT DETAILS</div>
+                </div>
+                <div class="album">
+                    <div class="album_broken"></div>
+                    <div class="album_lens"></div>
+                    <div class="album_block"></div>
+                    <div class="album_spec"></div>
+                    <div class="album_hollow"></div>
+                </div>
+            </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/index.js"></script>
 </body>
 
