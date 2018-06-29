@@ -13,61 +13,61 @@
 <body>
     <div id="app">
         <div class="container">
-            <div class="main">
+            <div id="main" v-if="indexview">
                 <div class="logo">SpecLens</div>
                 <div class="title" text="LEN'S TOPS">LEN'S TOPS</div>
                 <div class="theme1">
                     <div class="theme_title">SWIRL</div>
                     <div class="theme_block"></div>
-                    <div class="theme_img"></div>
+                    <div class="theme_img" @click="topage"></div>
                     <div class="theme_num">01</div>
                     <div class="theme_spec"></div>
                 </div>
                 <div class="theme2">
                     <div class="theme_title">radioactivity</div>
                     <div class="theme_block"></div>
-                    <div class="theme_img"></div>
+                    <div class="theme_img" @click="topage"></div>
                     <div class="theme_num">02</div>
                     <div class="theme_spec"></div>
                 </div>
                 <div class="theme3">
                     <div class="theme_title">Fish scales</div>
                     <div class="theme_block"></div>
-                    <div class="theme_img"></div>
+                    <div class="theme_img" @click="topage"></div>
                     <div class="theme_num">03</div>
                     <div class="theme_spec"></div>
                 </div>
                 <div class="theme4">
                     <div class="theme_title">Donut</div>
                     <div class="theme_block"></div>
-                    <div class="theme_img"></div>
+                    <div class="theme_img" @click="topage"></div>
                     <div class="theme_num">04</div>
                     <div class="theme_spec"></div>
                 </div>
                 <div class="theme5">
                     <div class="theme_title">Bubble</div>
                     <div class="theme_block"></div>
-                    <div class="theme_img"></div>
+                    <div class="theme_img" @click="topage"></div>
                     <div class="theme_num">05</div>
                     <div class="theme_spec"></div>
                 </div>
                 <div class="theme6">
                     <div class="theme_title">Star</div>
                     <div class="theme_block"></div>
-                    <div class="theme_img"></div>
+                    <div class="theme_img" @click="topage"></div>
                     <div class="theme_num">06</div>
                     <div class="theme_spec"></div>
                 </div>
                 <div class="theme7">
                     <div class="theme_title">explosion</div>
                     <div class="theme_block"></div>
-                    <div class="theme_img"></div>
+                    <div class="theme_img" @click="topage"></div>
                     <div class="theme_num">07</div>
                     <div class="theme_spec"></div>
                 </div>
             </div>
-            <div id="item">
-                <div class="sticker" @click="overview">
+            <div id="item" v-if="!indexview">
+                <div class="sticker" @click="toindex">
                     <i class="fas fa-arrow-left"></i>
                     <div class="logo">SpecLens</div>
                 </div>
@@ -79,9 +79,9 @@
                     <div class="cover_spec"></div>
                 </div>
                 <div class="article">
-                    <div class="article_title">{{article_title}}</div>
-                    <div class="article_text">{{article_text}}</div>
-                    <div class="article_content">{{article_content}}</div>
+                    <div class="article_title">{{showview.title}}</div>
+                    <div class="article_text">{{showview.text}}</div>
+                    <div class="article_content">{{showview.content}}</div>
                     <div class="article_annotation">PRODUCT DETAILS</div>
                 </div>
                 <div class="album">
