@@ -1,0 +1,169 @@
+@charset "UTF-8"
+
+
+//Color
+$black: #000
+$green: #50FF44 
+$gray: #F2F2F2
+$white: #FFF
+
+//Size
+$rows-size: 100px
+$columns-size: 128px
+$top-x: -9%
+$top-y: 0px
+
+@mixin font_size($font-size)
+    font-size: $font-size
+
+
+@mixin img($url)
+    background-image: url($url)
+    background-size: cover 
+    background-repeat: no-repeat 
+    background-position: center
+*
+    padding: 0
+    
+html, body
+    font-family: 'Jua', sans-serif, '微軟正黑體'
+    margin: 0
+
+
+.clear
+    clear: both
+
+.viewer
+    width: 1024px
+    margin: 0 auto
+    display: grid
+    grid-template-rows: repeat(12, $rows-size)
+    grid-template-columns: repeat(8, $columns-size)
+
+.logo
+    display: grid
+    grid-template-rows: repeat(1, $rows-size)
+    grid-template-columns: repeat(8, $columns-size)
+    grid-area: 1 / 1 / auto / 9
+    background-color: $black
+    height: 75px
+    z-index: 1
+    p
+        +font_size(36px)
+        grid-area: 1 / 4 / auto / 6
+        letter-spacing: 3px
+        color: $green
+        text-align: center 
+        // align-self: center
+        transform: translateY(-70%)
+        line-height: 42px
+
+.main   
+    display: grid
+    grid-template-rows: repeat(12, $rows-size)
+    grid-template-columns: repeat(8, $columns-size)
+    grid-area: 1 / 1 / 15 / 9
+    background-color: $gray
+    .ad
+        grid-area: 2 / 3 / 3 / auto
+        width: 640px
+        height: 100px
+        +img('https://hexschool.github.io/THE_F2E_Design/week5-comic%20viewer/assets/ad-1.png')
+        transform: translateX($top-x)
+
+    .comic
+        grid-area: 3 / 3 / auto / auto
+        width: 640px
+        height: 440px
+        transform: translateX($top-x)
+        margin-top: 24px
+        .cover
+            display: inline-block
+            width: 340px
+            height: 440px
+            +img('https://pbs.twimg.com/media/DhEa43OVQAAHHB1.jpg')
+        .introduction
+            display: inline-block
+            width: 300px
+            height: 440px
+            float: right
+            .title
+                margin-top: -36px
+                background-color: $black
+                p
+                    +font_size(36px)
+                    color: $white
+                    text-align: center
+                    line-height: 36px
+                    letter-spacing: 3px
+            .genres      
+                +font_size(16px) 
+                line-height: 24px  
+                margin-left: 20px
+                margin-top: -40px                                    
+                h2
+                    display: inline-block 
+                    margin-right: 50px
+                    width: 50px                   
+                p
+                    display: inline-block
+                    text-align: left
+                    width: 120px
+            .author
+                @extend .genres
+                margin-top: -20px
+            .status
+                @extend .author
+            .rate 
+                @extend .author
+            .summary
+                +font_size(16px) 
+                line-height: 24px  
+                margin-left: 20px
+                margin-top: -20px  
+
+    .ad2
+        grid-area: 8 / 3 / 9 / auto
+        width: 640px
+        height: 100px
+        +img('https://hexschool.github.io/THE_F2E_Design/week5-comic%20viewer/assets/ad-2.png')
+        transform: translateX($top-x) 
+
+    .chapters
+        display: grid
+        grid-template-rows: repeat(1, $rows-size)
+        // grid-template-columns: repeat(5, $rows-size)
+        grid-area: 10 / 3 / auto / 8
+        width: 640px
+        height: 100px
+        transform: translateX($top-x)
+        border: 4px solid $black
+        background-color: $white
+        p
+            +font_size(16px)
+            margin: 0
+            line-height: 24px
+        .block
+                grid-row: 1 /2
+                transform: translate(-4px,-48px)
+                width: 180px
+                height: 45px
+                background-color: $black
+                p          
+                    +font_size(24px)
+                    color: $white
+                    text-align: center 
+                    margin: 0
+                    margin-top: 13px
+    .ad3 
+        grid-area: 12 / 3 / 13 / auto
+        width: 640px
+        height: 100px
+        +img('https://hexschool.github.io/THE_F2E_Design/week5-comic%20viewer/assets/ad-3.png')
+        transform: translate($top-x, -40px)   
+        
+
+
+
+
+
