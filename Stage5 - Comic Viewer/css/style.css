@@ -1,6 +1,7 @@
 @charset "UTF-8";
 * {
-  padding: 0; }
+  padding: 0;
+  box-sizing: border-box; }
 
 html, body {
   font-family: "Jua", sans-serif, "微軟正黑體";
@@ -274,7 +275,37 @@ html, body {
   transform: translate(-9%, -15px); }
 
 .footer {
-  grid-area: 14/3/17/8;
-  transform: translateX(-9%); }
+  display: grid;
+  grid-area: 14/3/15/9;
+  grid-template-rows: repeat(1, 100px);
+  grid-template-columns: repeat(6, 128px);
+  width: 640px;
+  transform: translateX(-9%);
+  overflow: hidden; }
+  .footer button {
+    cursor: pointer;
+    width: 50px;
+    height: 100px;
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0.5); }
+  .footer .prev {
+    grid-area: 1/1/2/2;
+    z-index: 1; }
+  .footer .next {
+    grid-area: 1/5/2/6;
+    z-index: 1;
+    transform: translateX(160%); }
+  .footer .ulnav {
+    grid-area: 1/1/2/8;
+    height: 120px;
+    width: 960px;
+    margin: 0; }
+    .footer .ulnav li {
+      display: inline-block;
+      width: calc(10% - 21px);
+      height: 100%; }
+      .footer .ulnav li img {
+        width: calc(100% - 15px);
+        cursor: pointer; }
 
 /*# sourceMappingURL=style.css.map */

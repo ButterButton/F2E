@@ -24,6 +24,7 @@ $top-y: 0px
     background-position: center
 *
     padding: 0
+    box-sizing: border-box
     
 html, body
     font-family: 'Jua', sans-serif, '微軟正黑體'
@@ -292,5 +293,40 @@ $switch-size: 60px
 
 
 .footer
-    grid-area: 14 / 3 / 17 / 8
+    display: grid
+    grid-area: 14 / 3 / 15 / 9
+    grid-template-rows: repeat(1, $rows-size)
+    grid-template-columns: repeat(6, $columns-size)
+    width: 640px
     transform: translateX($top-x)
+    overflow: hidden
+    button
+        cursor: pointer
+        width: 50px
+        height: 100px
+        +font_size(30px)
+        background-color: rgba(0, 0, 0, 0.5)
+    .prev
+        grid-area: 1 / 1 / 2/ 2
+        z-index: 1
+    .next
+        grid-area: 1 / 5 / 2 / 6
+        z-index: 1
+        transform: translateX(160%)
+    .ulnav
+        grid-area: 1 / 1 / 2 / 8
+        height: 120px
+        width: 960px
+        margin: 0
+        li         
+            display: inline-block
+            width: calc(10% - 21px)
+            height: 100%
+            img
+                width: calc(100% - 15px)
+                cursor: pointer
+                
+
+                
+
+
