@@ -7,7 +7,8 @@
     <title>MCGEE LIFE</title>
     <link rel='stylesheet prefetch' href='https://use.fontawesome.com/releases/v5.0.13/css/all.css'>
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Jua|Oxygen" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/css-toggle-switch@latest/dist/toggle-switch.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/css-toggle-switch@latest/dist/toggle-switch.css"
+    />
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -18,7 +19,6 @@
                 <p>Comicomic</p>
             </header>
             <div class="pagemain">
-                <div class="ad"></div>
                 <div class="section">
                     <a href="index.html" class="aa">
                         <h3>MCGEE LIFE</h3>
@@ -26,6 +26,7 @@
                     <i class="fas fa-caret-right"></i>
                     <select name="" id="chapter">
                         <option value="Chapter1">Chapter1</option>
+                        <option value="Chapter2">Chapter2</option>
                     </select>
                     <select name="" id="page">
                         <option value="Page01">Page 01</option>
@@ -35,71 +36,87 @@
                         <label class="switch-light switch-candy switch" onclick="">
                             <input type="checkbox">
                             <span>
-                            <a></a>
+                                <a></a>
                             </span>
                         </label>
                         <i class="far fa-moon"></i>
                     </div>
                 </div>
-                <div class="pagead2"></div>
                 <div class="pageview">
-                    <i class="fas fa-angle-left"></i>
-                    <div class="comics"></div>
-                    <i class="fas fa-angle-right"></i>
-                </div>
-                <footer class="footer">
-                    <button class="prev">
+                    <button class="left">
                         <i class="fas fa-angle-left"></i>
                     </button>
-                    <ul class="ulnav">
-                        <li>
-                            <img src="https://hexschool.github.io/THE_F2E_Design/week5-comic%20viewer/assets/storyboard-1.png" alt="">
-                        </li>
-                        <li>
-                            <img src="https://hexschool.github.io/THE_F2E_Design/week5-comic%20viewer/assets/storyboard-2.png" alt="">
-                        </li>
-                        <li>
-                            <img src="https://hexschool.github.io/THE_F2E_Design/week5-comic%20viewer/assets/storyboard-3.png" alt="">
-                        </li>
-                        <li>
-                            <img src="https://hexschool.github.io/THE_F2E_Design/week5-comic%20viewer/assets/storyboard-4.png" alt="">
-                        </li>
-                        <li>
-                            <img src="https://hexschool.github.io/THE_F2E_Design/week5-comic%20viewer/assets/storyboard-5.png" alt="">
-                        </li>
-                        <li>
-                            <img src="https://hexschool.github.io/THE_F2E_Design/week5-comic%20viewer/assets/storyboard-6.png" alt="">
-                        </li>
-                        <li>
-                            <img src="https://hexschool.github.io/THE_F2E_Design/week5-comic%20viewer/assets/storyboard-7.png" alt="">
-                        </li>
-                        <li>
-                            <img src="https://hexschool.github.io/THE_F2E_Design/week5-comic%20viewer/assets/storyboard-8.png" alt="">
-                        </li>
-                        <li>
-                            <img src="https://hexschool.github.io/THE_F2E_Design/week5-comic%20viewer/assets/storyboard-9.png" alt="">
-                        </li>
-                        <li>
-                            <img src="https://hexschool.github.io/THE_F2E_Design/week5-comic%20viewer/assets/storyboard-10.png" alt="">
-                        </li>
-                        <li>
-                            <img src="https://hexschool.github.io/THE_F2E_Design/week5-comic%20viewer/assets/storyboard-11.png" alt="">
-                        </li>
-                        <li>
-                            <img src="https://hexschool.github.io/THE_F2E_Design/week5-comic%20viewer/assets/storyboard-12.png" alt="">
-                        </li>
-                    </ul>
-                    <button class="next">
+                    <img src="https://pbs.twimg.com/media/DhEa43OVQAAHHB1.jpg" class="comics">
+                    <button class="right">
                         <i class="fas fa-angle-right"></i>
                     </button>
+                </div>
+                <div class="button_item">
+                    <button id="prev">
+                        <i class="fas fa-angle-left"></i>
+                    </button>
+                    <button id="next">
+                        <i class="fas fa-angle-right"></i>
+                    </button>
+                </div>
+                <footer class="footer">
+                    <ul class="ulnav">
+                        <li>
+                            <p>1</p>
+                            <img src="https://hexschool.github.io/THE_F2E_Design/week5-comic%20viewer/assets/storyboard-1.png" alt="" class="lazy">
+                        </li>
+                        <li>
+                            <p>2</p>
+                            <img src="https://hexschool.github.io/THE_F2E_Design/week5-comic%20viewer/assets/storyboard-2.png" alt="" class="lazy">
+                        </li>
+                        <li>
+                            <p>3</p>
+                            <img src="https://hexschool.github.io/THE_F2E_Design/week5-comic%20viewer/assets/storyboard-3.png" alt="" class="lazy">
+                        </li>
+                        <li>
+                            <p>4</p>
+                            <img src="https://hexschool.github.io/THE_F2E_Design/week5-comic%20viewer/assets/storyboard-4.png" alt="" class="lazy">
+                        </li>
+                        <li>
+                            <p>5</p>
+                            <img src="https://hexschool.github.io/THE_F2E_Design/week5-comic%20viewer/assets/storyboard-5.png" alt="" class="lazy">
+                        </li>
+                        <li>
+                            <p>6</p>
+                            <img src="https://hexschool.github.io/THE_F2E_Design/week5-comic%20viewer/assets/storyboard-6.png" alt="" class="lazy">
+                        </li>
+                        <li>
+                            <p>7</p>
+                            <img src="https://hexschool.github.io/THE_F2E_Design/week5-comic%20viewer/assets/storyboard-7.png" alt="" class="lazy">
+                        </li>
+                        <li>
+                            <p>8</p>
+                            <img src="https://hexschool.github.io/THE_F2E_Design/week5-comic%20viewer/assets/storyboard-8.png" alt="" class="lazy">
+                        </li>
+                        <li>
+                            <p>9</p>
+                            <img src="https://hexschool.github.io/THE_F2E_Design/week5-comic%20viewer/assets/storyboard-9.png" alt="" class="lazy">
+                        </li>
+                        <li>
+                            <p>10</p>
+                            <img src="https://hexschool.github.io/THE_F2E_Design/week5-comic%20viewer/assets/storyboard-10.png" alt="" class="lazy">
+                        </li>
+                        <li>
+                            <p>11</p>
+                            <img src="https://hexschool.github.io/THE_F2E_Design/week5-comic%20viewer/assets/storyboard-11.png" alt="" class="lazy">
+                        </li>
+                        <li>
+                            <p>12</p>
+                            <img src="https://hexschool.github.io/THE_F2E_Design/week5-comic%20viewer/assets/storyboard-12.png" alt="" class="lazy">
+                        </li>
+                    </ul>
                 </footer>
-                <div class="pagead3"></div>
             </div>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-beta.2/lazyload.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

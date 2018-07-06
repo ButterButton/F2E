@@ -1,11 +1,10 @@
 @charset "UTF-8"
 
-
 //Color
-$black: #000
-$green: #50FF44 
-$gray: #F2F2F2
-$white: #FFF
+$dark: #000
+$second: #50FF44 
+$primary: #F2F2F2
+$light: #FFF
 
 //Size
 $rows-size: 100px
@@ -29,6 +28,7 @@ $top-y: 0px
 html, body
     font-family: 'Jua', sans-serif, '微軟正黑體'
     margin: 0
+    
 
 
 .clear
@@ -38,7 +38,7 @@ html, body
     width: 1024px
     margin: 0 auto
     display: grid
-    grid-template-rows: repeat(12, $rows-size)
+    grid-template-rows: repeat(8, $rows-size)
     grid-template-columns: repeat(8, $columns-size)
 
 .logo
@@ -46,14 +46,14 @@ html, body
     grid-template-rows: repeat(1, $rows-size)
     grid-template-columns: repeat(8, $columns-size)
     grid-area: 1 / 1 / auto / 9
-    background-color: $black
+    background-color: $dark
     height: 75px
     z-index: 1
     p
         +font_size(36px)
         grid-area: 1 / 4 / auto / 6
         letter-spacing: 3px
-        color: $green
+        color: $second
         text-align: center 
         // align-self: center
         transform: translateY(-70%)
@@ -61,10 +61,10 @@ html, body
 
 .main   
     display: grid
-    grid-template-rows: repeat(12, $rows-size)
+    grid-template-rows: repeat(8, $rows-size)
     grid-template-columns: repeat(8, $columns-size)
-    grid-area: 1 / 1 / 15 / 9
-    background-color: $gray
+    grid-area: 1 / 1 / 9 / 9
+    background-color: $primary
     .ad
         grid-area: 2 / 3 / 3 / auto
         width: 640px
@@ -73,7 +73,7 @@ html, body
         transform: translateX($top-x)
 
     .comic
-        grid-area: 3 / 3 / auto / auto
+        grid-area: 2 / 3 / auto / auto
         width: 640px
         height: 440px
         transform: translateX($top-x)
@@ -90,10 +90,10 @@ html, body
             float: right
             .title
                 margin-top: -36px
-                background-color: $black
+                background-color: $dark
                 p
                     +font_size(36px)
-                    color: $white
+                    color: $light
                     text-align: center
                     line-height: 36px
                     letter-spacing: 3px
@@ -134,27 +134,27 @@ html, body
         display: grid
         grid-template-rows: repeat(1, $rows-size)
         // grid-template-columns: repeat(5, $rows-size)
-        grid-area: 10 / 3 / auto / 8
+        grid-area: 8 / 3 / auto / 8
         width: 640px
         height: 100px
         transform: translateX($top-x)
-        border: 4px solid $black
-        background-color: $white
+        border: 4px solid $dark
+        background-color: $light
         .block
                 grid-row: 1 /2
                 transform: translate(-4px,-48px)
                 width: 180px
                 height: 45px
-                background-color: $black
+                background-color: $dark
                 p          
                     +font_size(24px)
-                    color: $white
+                    color: $light
                     text-align: center 
                     margin: 0
                     margin-top: 13px
                 a
                     text-decoration: none
-                    color: $black
+                    color: $dark
                     h4  
                         letter-spacing: 2px    
                         width: 330px
@@ -164,16 +164,16 @@ html, body
                         line-height: 24px
                         cursor: pointer                    
                         &:hover
-                            background-color: $black
-                            color: $white
+                            background-color: $dark
+                            color: $light
                 .new
                     width: 55px
                     height: 18px
-                    background-color: $green
+                    background-color: $second
                     transform: translate(360px,-43px)
                     h5
                         text-align: center
-                        color: $black
+                        color: $dark
                         +font_size(14px)
                         line-height: 14px
                         padding-top: 2px
@@ -193,10 +193,10 @@ $switch-size: 60px
 
 .pagemain 
     display: grid
-    grid-template-rows: repeat(18, $rows-size)
+    grid-template-rows: repeat(10, $rows-size)
     grid-template-columns: repeat(8, $columns-size)
-    grid-area: 1 / 1 / 18 / 9
-    background-color: $gray
+    grid-area: 1 / 1 / 11 / 9
+    background-color: $primary
     .ad
         grid-area: 2 / 3 / 3 / auto
         width: 640px
@@ -205,7 +205,7 @@ $switch-size: 60px
         transform: translateX($top-x)
     .section
         display: grid
-        grid-area: 3 / 1 / 4 / 9
+        grid-area: 2 / 1 / 3 / 9
         grid-template-rows: repeat(1, $rows-size)
         grid-template-columns: repeat(8, $columns-size)
         .aa
@@ -215,7 +215,7 @@ $switch-size: 60px
             align-self: center
             margin: 0
             transform: translateX(-60px)
-            color: $black
+            color: $dark
             text-decoration: none
             cursor: pointer
         .fa-caret-right
@@ -227,7 +227,7 @@ $switch-size: 60px
             grid-area: 1 / 4 / auto / 5
             +font_size(16px)
             font-weight: bold
-            border: 2px solid $black
+            border: 2px solid $dark
             width: 130px
             height: 35px
             align-self: center
@@ -265,24 +265,42 @@ $switch-size: 60px
         transform: translateX($top-x) 
     .pageview
         display: grid
-        grid-area: 5 / 1 / 14 / 9
-        grid-template-rows: repeat(9, $rows-size)
+        grid-area: 3 / 1 / 13 / 9
+        grid-template-rows: repeat(10, $rows-size)
         grid-template-columns: repeat(8, $columns-size)
         .comics
             grid-area: 1 / 3 / auto / auto
             width: 640px
             height: 800px
-            +img('https://pbs.twimg.com/media/DhEa43OVQAAHHB1.jpg')
+            background-size: cover 
+            background-repeat: no-repeat 
+            background-position: center
+            // +img('https://pbs.twimg.com/media/DhEa43OVQAAHHB1.jpg')
             transform: translateX($top-x) 
-            margin-top: 40px
-        i
+        button
+            border: none
+            background-color: $primary
+            border-radius: 2px
+            &:hover
+                background-color: $dark
+        .left
+            grid-area: 5 / 2 / 6 / 3
+            i
             +font_size(50px)
             cursor: pointer
-        .fa-angle-left
-            grid-area: 5 / 2 / 6 / 3
-        .fa-angle-right
+            justify-self: start
+            margin-left: 30px
+            &:hover
+                color: $second
+        .right
             grid-area: 5 / 7 / 6 / 8
             justify-self: end
+            margin-right: 20px
+            i
+            +font_size(50px)
+            cursor: pointer
+            &:hover
+                color: $second
 
 .pagead3
     grid-area: 18 / 3 / 19 / auto
@@ -294,25 +312,14 @@ $switch-size: 60px
 
 .footer
     display: grid
-    grid-area: 14 / 3 / 15 / 9
+    grid-area: 12 / 3 / 13 / 9
     grid-template-rows: repeat(1, $rows-size)
     grid-template-columns: repeat(6, $columns-size)
     width: 640px
     transform: translateX($top-x)
-    overflow: hidden
-    button
-        cursor: pointer
-        width: 50px
-        height: 100px
-        +font_size(30px)
-        background-color: rgba(0, 0, 0, 0.5)
-    .prev
-        grid-area: 1 / 1 / 2/ 2
-        z-index: 1
-    .next
-        grid-area: 1 / 5 / 2 / 6
-        z-index: 1
-        transform: translateX(160%)
+    overflow: scroll
+    overflow-y: hidden
+    margin-bottom: 10px
     .ulnav
         grid-area: 1 / 1 / 2 / 8
         height: 120px
@@ -321,11 +328,39 @@ $switch-size: 60px
         li         
             display: inline-block
             width: calc(10% - 21px)
-            height: 100%
+            height: 100%          
+            p  
+                z-index: 1
+                margin: 0
+                text-align: center
             img
                 width: calc(100% - 15px)
                 cursor: pointer
-                
+
+.button_item
+    display: grid
+    grid-area: 12 / 2 / 13 / 8
+    grid-template-rows: repeat(1, $rows-size)
+    grid-template-columns: repeat(6, $columns-size)
+    button
+        cursor: pointer
+        width: 50px
+        height: 100px
+        +font_size(30px)
+        background-color: rgba(0, 0, 0, 0.5)
+        border: none
+        border-radius: 2px
+        &:hover
+            background-color: $second
+    #prev
+        grid-area: 1 / 1 / 2/ 2
+        z-index: 1
+        margin-left: 65px
+    #next
+        grid-area: 1 / 6 / 2 / 7
+        margin-left:  30px         
+        z-index: 1
+                    
 
                 
 

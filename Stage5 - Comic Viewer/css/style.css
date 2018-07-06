@@ -4,7 +4,7 @@
   box-sizing: border-box; }
 
 html, body {
-  font-family: "Jua", sans-serif, "微軟正黑體";
+  font-family: 'Jua', sans-serif, '微軟正黑體';
   margin: 0; }
 
 .clear {
@@ -14,20 +14,20 @@ html, body {
   width: 1024px;
   margin: 0 auto;
   display: grid;
-  grid-template-rows: repeat(12, 100px);
+  grid-template-rows: repeat(8, 100px);
   grid-template-columns: repeat(8, 128px); }
 
 .logo {
   display: grid;
   grid-template-rows: repeat(1, 100px);
   grid-template-columns: repeat(8, 128px);
-  grid-area: 1/1/auto/9;
+  grid-area: 1 / 1 / auto / 9;
   background-color: #000;
   height: 75px;
   z-index: 1; }
   .logo p {
     font-size: 36px;
-    grid-area: 1/4/auto/6;
+    grid-area: 1 / 4 / auto / 6;
     letter-spacing: 3px;
     color: #50FF44;
     text-align: center;
@@ -36,12 +36,12 @@ html, body {
 
 .main {
   display: grid;
-  grid-template-rows: repeat(12, 100px);
+  grid-template-rows: repeat(8, 100px);
   grid-template-columns: repeat(8, 128px);
-  grid-area: 1/1/15/9;
+  grid-area: 1 / 1 / 9 / 9;
   background-color: #F2F2F2; }
   .main .ad {
-    grid-area: 2/3/3/auto;
+    grid-area: 2 / 3 / 3 / auto;
     width: 640px;
     height: 100px;
     background-image: url("https://hexschool.github.io/THE_F2E_Design/week5-comic%20viewer/assets/ad-1.png");
@@ -50,7 +50,7 @@ html, body {
     background-position: center;
     transform: translateX(-9%); }
   .main .comic {
-    grid-area: 3/3/auto/auto;
+    grid-area: 2 / 3 / auto / auto;
     width: 640px;
     height: 440px;
     transform: translateX(-9%);
@@ -98,7 +98,7 @@ html, body {
         margin-left: 20px;
         margin-top: -20px; }
   .main .ad2 {
-    grid-area: 8/3/9/auto;
+    grid-area: 8 / 3 / 9 / auto;
     width: 640px;
     height: 100px;
     background-image: url("https://hexschool.github.io/THE_F2E_Design/week5-comic%20viewer/assets/ad-2.png");
@@ -109,14 +109,14 @@ html, body {
   .main .chapters {
     display: grid;
     grid-template-rows: repeat(1, 100px);
-    grid-area: 10/3/auto/8;
+    grid-area: 8 / 3 / auto / 8;
     width: 640px;
     height: 100px;
     transform: translateX(-9%);
     border: 4px solid #000;
     background-color: #FFF; }
     .main .chapters .block {
-      grid-row: 1/2;
+      grid-row: 1 /2;
       transform: translate(-4px, -48px);
       width: 180px;
       height: 45px;
@@ -154,7 +154,7 @@ html, body {
           padding-top: 2px;
           letter-spacing: 2px; }
   .main .ad3 {
-    grid-area: 12/3/13/auto;
+    grid-area: 12 / 3 / 13 / auto;
     width: 640px;
     height: 100px;
     background-image: url("https://hexschool.github.io/THE_F2E_Design/week5-comic%20viewer/assets/ad-3.png");
@@ -165,12 +165,12 @@ html, body {
 
 .pagemain {
   display: grid;
-  grid-template-rows: repeat(18, 100px);
+  grid-template-rows: repeat(10, 100px);
   grid-template-columns: repeat(8, 128px);
-  grid-area: 1/1/18/9;
+  grid-area: 1 / 1 / 11 / 9;
   background-color: #F2F2F2; }
   .pagemain .ad {
-    grid-area: 2/3/3/auto;
+    grid-area: 2 / 3 / 3 / auto;
     width: 640px;
     height: 100px;
     background-image: url("https://hexschool.github.io/THE_F2E_Design/week5-comic%20viewer/assets/ad-1.png");
@@ -180,12 +180,12 @@ html, body {
     transform: translateX(-9%); }
   .pagemain .section {
     display: grid;
-    grid-area: 3/1/4/9;
+    grid-area: 2 / 1 / 3 / 9;
     grid-template-rows: repeat(1, 100px);
     grid-template-columns: repeat(8, 128px); }
     .pagemain .section .aa {
       font-size: 20px;
-      grid-area: 1/3/auto/4;
+      grid-area: 1 / 3 / auto / 4;
       text-align: center;
       align-self: center;
       margin: 0;
@@ -194,12 +194,12 @@ html, body {
       text-decoration: none;
       cursor: pointer; }
     .pagemain .section .fa-caret-right {
-      grid-area: 1/3/auto/4;
+      grid-area: 1 / 3 / auto / 4;
       align-self: center;
       justify-self: center;
       margin-left: 25px; }
     .pagemain .section #chapter, .pagemain .section #page {
-      grid-area: 1/4/auto/5;
+      grid-area: 1 / 4 / auto / 5;
       font-size: 16px;
       font-weight: bold;
       border: 2px solid #000;
@@ -211,28 +211,28 @@ html, body {
       padding-left: 15px;
       cursor: pointer; }
     .pagemain .section #page {
-      grid-area: 1/5/auto/6; }
+      grid-area: 1 / 5 / auto / 6; }
     .pagemain .section .tool {
       display: grid;
-      grid-area: 1/7/2/8;
+      grid-area: 1 / 7 / 2 / 8;
       grid-template-rows: repeat(1, 100px);
       grid-template-columns: repeat(1, 128px);
       justify-items: center;
       align-items: center;
       transform: translateX(-60px); }
       .pagemain .section .tool i {
-        grid-area: 1/1/2/2;
+        grid-area: 1 / 1 / 2 / 2;
         font-size: 20px; }
       .pagemain .section .tool .fa-sun {
         transform: translateX(-50px); }
       .pagemain .section .tool .fa-moon {
         transform: translateX(50px); }
       .pagemain .section .tool .switch {
-        grid-area: 1/1/2/2;
+        grid-area: 1 / 1 / 2 / 2;
         width: 50px;
         cursor: pointer; }
   .pagemain .pagead2 {
-    grid-area: 4/3/5/auto;
+    grid-area: 4 / 3 / 5 / auto;
     width: 640px;
     height: 100px;
     background-image: url("https://hexschool.github.io/THE_F2E_Design/week5-comic%20viewer/assets/ad-2.png");
@@ -242,30 +242,42 @@ html, body {
     transform: translateX(-9%); }
   .pagemain .pageview {
     display: grid;
-    grid-area: 5/1/14/9;
-    grid-template-rows: repeat(9, 100px);
+    grid-area: 3 / 1 / 13 / 9;
+    grid-template-rows: repeat(10, 100px);
     grid-template-columns: repeat(8, 128px); }
     .pagemain .pageview .comics {
-      grid-area: 1/3/auto/auto;
+      grid-area: 1 / 3 / auto / auto;
       width: 640px;
       height: 800px;
-      background-image: url("https://pbs.twimg.com/media/DhEa43OVQAAHHB1.jpg");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
-      transform: translateX(-9%);
-      margin-top: 40px; }
-    .pagemain .pageview i {
+      transform: translateX(-9%); }
+    .pagemain .pageview button {
+      border: none;
+      background-color: #F2F2F2;
+      border-radius: 2px; }
+      .pagemain .pageview button:hover {
+        background-color: #000; }
+    .pagemain .pageview .left {
+      grid-area: 5 / 2 / 6 / 3;
+      font-size: 50px;
+      cursor: pointer;
+      justify-self: start;
+      margin-left: 30px; }
+      .pagemain .pageview .left:hover {
+        color: #50FF44; }
+    .pagemain .pageview .right {
+      grid-area: 5 / 7 / 6 / 8;
+      justify-self: end;
+      margin-right: 20px;
       font-size: 50px;
       cursor: pointer; }
-    .pagemain .pageview .fa-angle-left {
-      grid-area: 5/2/6/3; }
-    .pagemain .pageview .fa-angle-right {
-      grid-area: 5/7/6/8;
-      justify-self: end; }
+      .pagemain .pageview .right:hover {
+        color: #50FF44; }
 
 .pagead3 {
-  grid-area: 18/3/19/auto;
+  grid-area: 18 / 3 / 19 / auto;
   width: 640px;
   height: 100px;
   background-image: url("https://hexschool.github.io/THE_F2E_Design/week5-comic%20viewer/assets/ad-3.png");
@@ -276,27 +288,16 @@ html, body {
 
 .footer {
   display: grid;
-  grid-area: 14/3/15/9;
+  grid-area: 12 / 3 / 13 / 9;
   grid-template-rows: repeat(1, 100px);
   grid-template-columns: repeat(6, 128px);
   width: 640px;
   transform: translateX(-9%);
-  overflow: hidden; }
-  .footer button {
-    cursor: pointer;
-    width: 50px;
-    height: 100px;
-    font-size: 30px;
-    background-color: rgba(0, 0, 0, 0.5); }
-  .footer .prev {
-    grid-area: 1/1/2/2;
-    z-index: 1; }
-  .footer .next {
-    grid-area: 1/5/2/6;
-    z-index: 1;
-    transform: translateX(160%); }
+  overflow: scroll;
+  overflow-y: hidden;
+  margin-bottom: 10px; }
   .footer .ulnav {
-    grid-area: 1/1/2/8;
+    grid-area: 1 / 1 / 2 / 8;
     height: 120px;
     width: 960px;
     margin: 0; }
@@ -304,8 +305,34 @@ html, body {
       display: inline-block;
       width: calc(10% - 21px);
       height: 100%; }
+      .footer .ulnav li p {
+        z-index: 1;
+        margin: 0;
+        text-align: center; }
       .footer .ulnav li img {
         width: calc(100% - 15px);
         cursor: pointer; }
 
-/*# sourceMappingURL=style.css.map */
+.button_item {
+  display: grid;
+  grid-area: 12 / 2 / 13 / 8;
+  grid-template-rows: repeat(1, 100px);
+  grid-template-columns: repeat(6, 128px); }
+  .button_item button {
+    cursor: pointer;
+    width: 50px;
+    height: 100px;
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 2px; }
+    .button_item button:hover {
+      background-color: #50FF44; }
+  .button_item #prev {
+    grid-area: 1 / 1 / 2/ 2;
+    z-index: 1;
+    margin-left: 65px; }
+  .button_item #next {
+    grid-area: 1 / 6 / 2 / 7;
+    margin-left: 30px;
+    z-index: 1; }
