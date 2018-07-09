@@ -27,9 +27,6 @@ function btn_switch() {
     });
 
 
-
-
-
     // $('button.left').click(function () {
 
     // });

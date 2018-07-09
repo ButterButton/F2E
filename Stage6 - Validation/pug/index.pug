@@ -1,0 +1,87 @@
+html(lang="en")
+    head
+        - var name = 'Stage6 - Validation'
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title= name
+        link(rel='stylesheet prefetch' href='https://use.fontawesome.com/releases/v5.0.13/css/all.css')
+        link(href="https://fonts.googleapis.com/css?family=Indie+Flower|Jua|Oxygen" rel="stylesheet")
+        link(rel="stylesheet", type="text/css" href="css/style.css")
+        link(rel="stylesheet", type="text/css" href="css/bar.css")
+    body
+        #app
+            .cotainer
+                .createaccount
+                    header
+                    ul.progressbar
+                        li.active
+                        li
+                        li
+                        li
+                    .title
+                        h1 Create Account
+                        p  Glad to see you here!
+                    .main
+                        .funt
+                            h3 Account
+                            input.page1(type="email", name="")
+                        .funt
+                            h3 Password
+                            input.page1(type="password", name="")
+                        .funt
+                            h3 Comfirm Password
+                            input.page1(type="password", name="")
+                        button(type="button")|SUBMIT & NEXT
+                .infomation
+                    header
+                    ul.progressbar
+                        li
+                        li.active
+                        li
+                        li
+                    .title
+                        h1 General Infomation
+                        p  Tell us who you are!
+                    .main
+                        .funt
+                            .name
+                                h3 Name
+                                input.nametext(type="text", name="")
+                            .phone
+                                h3 Phone*
+                                input.phonetext(type="text", name="")
+                            .clear
+
+                        .funt
+                            h3 Birth Date
+                            select.birth(name="")
+                            select.birth(name="")
+                            select.birth(name="")
+                            .clear
+                        .funt
+                            h3 Address*
+                            select.address(name="")
+                            select.address(name="")
+                            input.road(type="text", name="")
+                            .clear
+                        button(type="button")|SUBMIT & NEXT
+                .update
+                    header
+                    ul.progressbar
+                        li
+                        li
+                        li.active
+                        li
+                    .title
+                        h1 Update Profile Picture
+                        p  We wanna know you more!
+                    .main
+                        .funt(style="height:140px")
+                            label.upload(for="")
+                                input(type="file", name="")
+                                i.fas.fa-images
+                                i.fa.fa-times-circle-o
+                        button(type="button")|SUBMIT & NEXT
+
+                        

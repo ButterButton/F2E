@@ -1,0 +1,117 @@
+//Color
+$primary: #FFF
+$second: #0275D8
+$assist: #BEE1FF
+$warning: #F5A623
+$prompt: #9B9B9B
+	
+//Font
+$title: 48px
+$subtitle: 24px
+$form: 20px
+$label: 14px
+$box-size: 220px
+
+
+@mixin text_box($width)
+    border: 2px solid #000000
+    border-radius: 8px     
+    width: $width
+    height: 52px
+    outline: none
+
+*
+    font-family: 'Jua', sans-serif, '微軟正黑體'
+    box-sizing: border-box
+    
+html, body
+    padding: 0   
+    background-color: $primary
+    display: flex
+    justify-content: center
+    align-items: start
+
+.createaccount
+    display: none
+
+.infomation
+    display: none
+
+.cotainer
+    width: 460px
+    header
+        border: 8px solid $second
+        height: 3px
+        margin-top: -15px
+    .title
+        margin-top: calc(100% - 60%)
+        text-align: center
+        h1
+            font-size: $title
+            width: auto
+            margin: 0
+        p
+            font-size: $subtitle
+            width: auto
+            margin: 0
+    .main
+        text-align: center
+        .funt
+            width: 100%
+            margin-top: calc(100% - 95%)
+            .clear
+                clear: both
+            h3
+                margin-top: 
+                margin: 0
+                text-align: left
+                font-size: 20px
+            .page1
+                +text_box(460px)
+            .name, .phone
+                width: $box-size
+                .nametext, .phonetext
+                    width: $box-size
+            .name
+                float: left
+                h3
+                    width: 125px
+                .nametext
+                    +text_box(220px)                   
+            .phone
+                float: right
+                .phonetext
+                    +text_box(220px)
+            .birth
+                +text_box(140px)
+                float: left 
+                margin-right: calc((100% - 420px) / 3)
+            .address
+                +text_box(220px)
+                float: left
+                margin-right: calc((100% - 440px) / 2)
+            .road
+                +text_box(460px)
+                margin-top: calc(100% - 95%)
+            .upload
+                +text_box(460px)
+                height: 140px
+                                       
+        button
+            width: 460px
+            height: 52px
+            background: $assist
+            border: 2px solid $assist
+            border-radius: 8px
+            margin-top: calc(100% - 95%)
+            font-size: 20px
+            color: $primary
+            line-height: 25px
+            cursor: pointer
+            outline: none
+
+
+
+
+
+
