@@ -94,6 +94,42 @@ html(lang="en")
                         h1 Payment Method
                         p  Add your credit card infomation! 
                     .main
-
+                        .funt
+                            h3 Card Number
+                            input.page1(type="text", name="")
+                            <i class="fab fa-cc-visa"></i>                        
+                        .funt
+                            .cardname
+                                h3 Cardholder Name
+                                input.page1(type="text", name="")
+                            .bankname
+                                h3 Bank Name
+                                input.page1(type="text", name="")
+                            .clear
+                        .funt
+                            .cvv
+                                h3 CVV
+                                input.page1(type="password", name="")
+                            .mm
+                                h3 Expire Date
+                                select.date(name="")
+                            .dd
+                                select.date(name="")
+                            .clear
+                        button(type="button")|SUBMIT & NEXT
+                .smile
+                    header
+                    ul.progressbar
+                        li.active
+                        li.active
+                        li.active
+                        li.active
+                    .title
+                        h1 Congratulations
+                        p  Now you’re one of us! 
+                    .main
+                        .funt(style="margin= 0")
+                            div ☻
+                        p.redirect Redirected to homepage after 5 seconds…
 
                         
