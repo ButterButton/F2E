@@ -25,7 +25,8 @@ html(lang="en")
                     .main
                         .funt
                             h3 Account
-                            input.page1(type="email", name="")
+                            input.page1(type="text", name="email", v-bind:class="{ 'is-invalid': emailError }", v-model="email", placeholder="Email")
+                            h5.invalid-feedback {{ emailErrMsg }}
                         .funt
                             h3 Password
                             input.page1(type="password", name="")
@@ -131,5 +132,10 @@ html(lang="en")
                         .funt(style="margin= 0")
                             div ☻
                         p.redirect Redirected to homepage after 5 seconds…
+        script(src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js")
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+        script(src='js/main.js')
+
+
 
                         

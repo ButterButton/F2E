@@ -28,7 +28,8 @@
           <div class="main">
             <div class="funt">
               <h3>Account</h3>
-              <input class="page1" type="email" name=""/>
+              <input class="page1" type="text" name="email" v-bind:class="{ 'is-invalid': emailError }" v-model="email" placeholder="Email"/>
+              <h5 class="invalid-feedback">{{ emailErrMsg }}</h5>
             </div>
             <div class="funt">
               <h3>Password</h3>
@@ -170,5 +171,8 @@
         </div>
       </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

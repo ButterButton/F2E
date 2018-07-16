@@ -8,7 +8,8 @@
     "gulp-livereload": "^3.8.1",
     "gulp-pug": "^4.0.1",
     "gulp-webserver": "^0.9.1",
-    "npm": "^6.1.0"
+    "npm": "^6.1.0",
+    "vee-validate": "^2.1.0-beta.6"
   },
   "devDependencies": {
     "eslint": "^5.1.0",

@@ -10,9 +10,6 @@ html, body {
   justify-content: center;
   align-items: start; }
 
-.createaccount {
-  display: none; }
-
 .infomation {
   display: none; }
 
@@ -20,6 +17,9 @@ html, body {
   display: none; }
 
 .payment {
+  display: none; }
+
+.smile {
   display: none; }
 
 .cotainer {
@@ -55,7 +55,10 @@ html, body {
         border-radius: 8px;
         width: 460px;
         height: 52px;
-        outline: none; }
+        outline: none;
+        font-size: 14px;
+        text-align: center;
+        letter-spacing: 3px; }
       .cotainer .main .funt .name, .cotainer .main .funt .phone {
         width: 220px; }
         .cotainer .main .funt .name .nametext, .cotainer .main .funt .name .phonetext, .cotainer .main .funt .phone .nametext, .cotainer .main .funt .phone .phonetext {
