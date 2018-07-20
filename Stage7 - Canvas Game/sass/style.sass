@@ -1,8 +1,28 @@
+// Color
+  $main: #001D2E
+
 html, body
-    height: 100%
-    display: flex
-    justify-content: center
-    align-items: center
-    // background: #001D2E
+  height: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: $main
 canvas
-    border: 3px solid #000
+  border: 3px solid #000
+button
+  position: absolute
+  background-color: transparent
+  outline: none
+  color: #fff
+  font-size: 18px
+  text-align: center
+  border: 2px solid #fff
+  border-radius: 20px
+  margin: 50px auto 0
+  padding: 5px 20px
+  cursor: pointer
+  transition: .3s
+  transform: translate(-10px, 50px)
+  &:hover
+      background-color: #fff
+      color: $main
