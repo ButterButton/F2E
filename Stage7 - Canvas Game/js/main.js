@@ -14,6 +14,12 @@ var main = '#001D2E'
 canvas.width = ww
 canvas.height = wh
 
+
+$('#btn').click(function () {
+  $('#mycanvas').hide()
+  $('#playcanvas').show()
+})
+
 function index() {
   // 黃色圓形
   ctx.beginPath()
@@ -58,7 +64,7 @@ function index() {
   // 文字主題
   ctx.font = '22px 微軟正黑體'
   ctx.fillStyle = '#FFF'
-  ctx.fillText(' Radio Defense', ww / 2 - 80, wh / 2 + 30)
+  ctx.fillText(' Radio Defense', ww / 2 - 80, wh / 2 + 50)
 
   // 文字介紹
   ctx.font = '22px 微軟正黑體'
