@@ -1,0 +1,43 @@
+@charset "UTF-8";
+* {
+  width: 100%;
+  height: 100%;
+  font-family: 'Jua', sans-serif, '微軟正黑體'; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #1469FF; }
+
+#app {
+  width: 100%; }
+  #app .container {
+    width: 100%; }
+    #app .container .main {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      #app .container .main svg {
+        width: 600px;
+        height: 550px;
+        fill: transparent; }
+        #app .container .main svg rect {
+          x: 80;
+          y: 60;
+          width: 440px;
+          height: 435px;
+          fill: #000000; }
+        #app .container .main svg circle {
+          cx: 300;
+          cy: 275;
+          r: 250;
+          fill: #0027C8; }
+        #app .container .main svg polygon {
+          fill: #FF3C82;
+          width: 200px;
+          height: 200px; }
+        #app .container .main svg text {
+          fill: #FFF;
+          font-size: 64px; }
+        #app .container .main svg .text2 {
+          font-size: 24px; }

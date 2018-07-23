@@ -1,0 +1,56 @@
+//Color
+$main: #1469FF
+$second:	#FF3C82
+$second2: #0027C8    
+$choose: #FFF
+$dark: #000000
+
+//Size
+$title: 64px
+$subtitle: 36px
+$subtitle2: 24px
+$paragraph: 20px
+
+*
+	width: 100%
+	height: 100%
+	font-family: 'Jua', sans-serif, '微軟正黑體'
+
+html,body
+	margin: 0
+	padding: 0
+	background-color: $main
+
+#app	
+	width: 100%
+	.container
+		width: 100%
+		.main
+			display: flex
+			justify-content: center
+			align-items: center
+			svg
+				width: 600px
+				height: 550px
+				fill: transparent
+				rect
+					x: 80
+					y: 60
+					width: 440px
+					height: 435px
+					fill: $dark
+				circle
+					cx: 300
+					cy: 275
+					r: 250
+					fill: $second2
+				polygon
+					fill: $second
+					width: 200px
+					height: 200px
+				text
+					fill: $choose
+					font-size: $title
+				.text2
+					font-size: $subtitle2
+					
