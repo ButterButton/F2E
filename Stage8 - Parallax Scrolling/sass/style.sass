@@ -1,8 +1,8 @@
 //Color
 $main: #1469FF
-$second:	#FF3C82
+$second: #FF3C82
 $second2: #0027C8    
-$choose: #FFF
+$light: #FFF
 $dark: #000000
 
 //Size
@@ -12,23 +12,32 @@ $subtitle2: 24px
 $paragraph: 20px
 
 *
-	width: 100%
-	height: 100%
 	font-family: 'Jua', sans-serif, '微軟正黑體'
+	outline: none
 
 html,body
+	width: 100vw
+	height: 100vh
 	margin: 0
 	padding: 0
 	background-color: $main
-
+	// display: flex
+	// align-items: center
+	// justify-content: center
+	box-sizing: border-box
+	overflow: hidden
+	
 #app	
 	width: 100%
+	height: 100%
 	.container
 		width: 100%
+		height: 100%
 		.main
 			display: flex
 			justify-content: center
 			align-items: center
+			height: 100%
 			svg
 				width: 600px
 				height: 550px
@@ -46,11 +55,64 @@ html,body
 					fill: $second2
 				polygon
 					fill: $second
-					width: 200px
-					height: 200px
 				text
-					fill: $choose
+					fill: $light
 					font-size: $title
 				.text2
 					font-size: $subtitle2
-					
+		.question
+			width: 100%
+			height: 100%
+			.q1_left
+				width: calc(100% / 10 * 6 )
+				float: left
+				height: 100%
+				.content
+					margin-left: calc(100% / 3)
+					width: calc(100% / 2)
+					h1
+						font-size: $title
+						color: $second
+					h2
+						font-size: $subtitle
+						color: $light
+					p
+						font-size: $subtitle2
+						color: $second2
+					.select
+						width: 100%
+						button
+							width: 100%
+							height: 55px
+							margin-bottom: 16px
+							background-color: transparent
+							border-radius: 30.5px
+							border: 2px solid $light
+							cursor: pointer
+							font-size: $paragraph
+							color: $light
+							&:hover
+								background-color: $light
+								color: $main							
+			.q1_right
+				width: calc(100% / 10 * 4 )
+				float: right
+				background-color: $second2
+				height: 100%
+				svg 
+					width: 100%
+					height: 100%
+					rect
+						x: calc(100% - 80%)
+						y: calc(100% / 9)
+						width: 180px
+						height: 180px
+						fill: $second
+					polygon
+						fill: $light
+						transform: translate(calc(100% - 22%),calc(100% / 3))
+					circle
+						cx: calc(100% - 20%)
+						cy: calc(100% - 8%)
+						r: calc(100% / 3)
+						fill: $dark

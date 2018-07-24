@@ -1,22 +1,28 @@
 @charset "UTF-8";
 * {
-  width: 100%;
-  height: 100%;
-  font-family: 'Jua', sans-serif, '微軟正黑體'; }
+  font-family: 'Jua', sans-serif, '微軟正黑體';
+  outline: none; }
 
 html, body {
+  width: 100vw;
+  height: 100vh;
   margin: 0;
   padding: 0;
-  background-color: #1469FF; }
+  background-color: #1469FF;
+  box-sizing: border-box;
+  overflow: hidden; }
 
 #app {
-  width: 100%; }
+  width: 100%;
+  height: 100%; }
   #app .container {
-    width: 100%; }
+    width: 100%;
+    height: 100%; }
     #app .container .main {
       display: flex;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+      height: 100%; }
       #app .container .main svg {
         width: 600px;
         height: 550px;
@@ -33,11 +39,65 @@ html, body {
           r: 250;
           fill: #0027C8; }
         #app .container .main svg polygon {
-          fill: #FF3C82;
-          width: 200px;
-          height: 200px; }
+          fill: #FF3C82; }
         #app .container .main svg text {
           fill: #FFF;
           font-size: 64px; }
         #app .container .main svg .text2 {
           font-size: 24px; }
+    #app .container .question {
+      width: 100%;
+      height: 100%; }
+      #app .container .question .q1_left {
+        width: calc(100% / 10 * 6);
+        float: left;
+        height: 100%; }
+        #app .container .question .q1_left .content {
+          margin-left: calc(100% / 3);
+          width: calc(100% / 2); }
+          #app .container .question .q1_left .content h1 {
+            font-size: 64px;
+            color: #FF3C82; }
+          #app .container .question .q1_left .content h2 {
+            font-size: 36px;
+            color: #FFF; }
+          #app .container .question .q1_left .content p {
+            font-size: 24px;
+            color: #0027C8; }
+          #app .container .question .q1_left .content .select {
+            width: 100%; }
+            #app .container .question .q1_left .content .select button {
+              width: 100%;
+              height: 55px;
+              margin-bottom: 16px;
+              background-color: transparent;
+              border-radius: 30.5px;
+              border: 2px solid #FFF;
+              cursor: pointer;
+              font-size: 20px;
+              color: #FFF; }
+              #app .container .question .q1_left .content .select button:hover {
+                background-color: #FFF;
+                color: #1469FF; }
+      #app .container .question .q1_right {
+        width: calc(100% / 10 * 4);
+        float: right;
+        background-color: #0027C8;
+        height: 100%; }
+        #app .container .question .q1_right svg {
+          width: 100%;
+          height: 100%; }
+          #app .container .question .q1_right svg rect {
+            x: calc(100% - 80%);
+            y: calc(100% / 9);
+            width: 180px;
+            height: 180px;
+            fill: #FF3C82; }
+          #app .container .question .q1_right svg polygon {
+            fill: #FFF;
+            transform: translate(calc(100% - 22%), calc(100% / 3)); }
+          #app .container .question .q1_right svg circle {
+            cx: calc(100% - 20%);
+            cy: calc(100% - 8%);
+            r: calc(100% / 3);
+            fill: #000000; }

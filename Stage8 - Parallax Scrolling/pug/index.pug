@@ -12,12 +12,30 @@ html(lang="en")
     body
         #app
             .container
-                .main
-                    svg
+                .main(style="display:none")
+                    svg(xmlns="http://www.w3.org/2000/svg" version="1.1")
                         rect
                         circle
-                        polygon(points="181,69 193,93 219,96 200,115 205,140 181,129 157,141 162,115 143,96 169,93")
+                        polygon(points="300,100 110,400 300,400 300,450 490,150 110,150 300,450 300,400 490,400 ")
                         text(x="15" y="275") GEOMETRY PERSON
                         text.text2(x="80" y="320") find your core personality type in shapes!
-                .q1
-                    
+                .question
+                    .q1_left
+                        .content
+                            h1 Q1
+                            h2 If one day you get a gift that can change the rule of the world, which ability will you choose? 
+                            p Choose the answer appeared in your mind instantly
+                            .select 
+                                button Destroy all humans in the world
+                                     
+                                button Make the war never happened
+                                     
+                                button You won’t get old and live forever
+                                     
+                    .q1_right
+                        svg(xmlns="http://www.w3.org/2000/svg" version="1.1")
+                            rect
+                            polygon(points="100,50 25,150 175,150")
+                            circle
+                            
+                            
