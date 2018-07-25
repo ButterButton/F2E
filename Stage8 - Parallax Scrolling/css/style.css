@@ -82,8 +82,8 @@ html, body {
       #app .container .question .q1_right {
         width: calc(100% / 10 * 4);
         float: right;
-        background-color: #0027C8;
-        height: 100%; }
+        height: 100%;
+        background-color: #0027C8; }
         #app .container .question .q1_right svg {
           width: 100%;
           height: 100%; }
@@ -101,3 +101,120 @@ html, body {
             cy: calc(100% - 8%);
             r: calc(100% / 3);
             fill: #000000; }
+      #app .container .question .q2_left {
+        width: calc(100% / 10 * 4);
+        float: left;
+        height: 100%;
+        background-color: #FF3C82; }
+        #app .container .question .q2_left svg {
+          width: 100%;
+          height: 100%; }
+          #app .container .question .q2_left svg rect {
+            x: calc(100% - 80%);
+            y: calc(100% / 9);
+            width: 400px;
+            height: 400px;
+            fill: #1469FF;
+            transform: translate(10%, 10%) rotate(54deg); }
+          #app .container .question .q2_left svg polygon {
+            fill: #FFF;
+            transform: translate(20%, -20%) rotate(20deg); }
+          #app .container .question .q2_left svg circle {
+            cx: calc(100% - 50%);
+            cy: calc(100% - 30%);
+            r: calc(100% / 6);
+            fill: #000000; }
+      #app .container .question .q2_right {
+        width: calc(100% / 10 * 6);
+        float: right;
+        height: 100%;
+        background-color: #0027C8; }
+        #app .container .question .q2_right .content {
+          margin-left: calc(100% / 3);
+          width: calc(100% / 2); }
+          #app .container .question .q2_right .content h1 {
+            font-size: 64px;
+            color: #FF3C82; }
+          #app .container .question .q2_right .content h2 {
+            font-size: 36px;
+            color: #FFF; }
+          #app .container .question .q2_right .content p {
+            font-size: 24px;
+            color: #1469FF; }
+          #app .container .question .q2_right .content .select {
+            width: 100%; }
+            #app .container .question .q2_right .content .select button {
+              width: 100%;
+              height: 55px;
+              margin-bottom: 16px;
+              background-color: transparent;
+              border-radius: 30.5px;
+              border: 2px solid #FFF;
+              cursor: pointer;
+              font-size: 20px;
+              color: #FFF; }
+              #app .container .question .q2_right .content .select button:hover {
+                background-color: #FFF;
+                color: #1469FF; }
+      #app .container .question .q3_left {
+        width: calc(100% / 10 * 6);
+        float: left;
+        height: 100%;
+        background-color: #FF3C82; }
+        #app .container .question .q3_left .content {
+          margin-left: calc(100% / 3);
+          width: calc(100% / 2); }
+          #app .container .question .q3_left .content h1 {
+            font-size: 64px;
+            color: #FFF; }
+          #app .container .question .q3_left .content h2 {
+            font-size: 36px;
+            color: #000000; }
+          #app .container .question .q3_left .content p {
+            font-size: 24px;
+            color: #000000; }
+          #app .container .question .q3_left .content .select {
+            width: 100%; }
+            #app .container .question .q3_left .content .select button {
+              width: 100%;
+              height: 55px;
+              margin-bottom: 16px;
+              background-color: transparent;
+              border-radius: 30.5px;
+              border: 2px solid #FFF;
+              cursor: pointer;
+              font-size: 20px;
+              color: #FFF; }
+              #app .container .question .q3_left .content .select button:hover {
+                background-color: #FFF;
+                color: #1469FF; }
+      #app .container .question .q3_right {
+        width: calc(100% / 10 * 4);
+        float: right;
+        height: 100%; }
+        #app .container .question .q3_right svg {
+          width: 100%;
+          height: 100%; }
+          #app .container .question .q3_right svg rect {
+            x: calc(100% - 80%);
+            y: calc(100% / 9);
+            width: 330px;
+            height: 330px;
+            fill: #0027C8;
+            transform: rotate(2deg); }
+          #app .container .question .q3_right svg polygon {
+            fill: #000000;
+            transform: translate(110%, 65%) rotate(90deg); }
+          #app .container .question .q3_right svg circle {
+            cx: calc(100% - 10%);
+            cy: calc(100% - 85%);
+            r: calc(100% / 4);
+            fill: #FFF; }
+      #app .container .question .result {
+        width: 100%;
+        height: 100%; }
+        #app .container .question .result svg {
+          width: 100%;
+          height: 100%; }
+    #app .container .none {
+      display: none; }
