@@ -64,9 +64,29 @@ html(lang="en")
                             rect
                             polygon(points="100,0 -30,300 230,300")
                             circle           
-                .question
+                .question.none
                     .result
-                        svg(xmlns="http://www.w3.org/2000/svg" version="1.1")
-                            text(x="800" y="450") ALL DONE!
-                                tspan(x="780" y="500") Keep scrolling to show the result
-                            polygon(points="100,0 -30,300 230,300")
+                        h1 ALL DONE!
+                        p Keep scrolling to show the result
+                .question.none
+                    .result
+                        h1 NOW CACULATING
+                        p Keep scrolling to show the result
+                .question.none
+                    .result
+                        h1(style="color:#000000") YOU ARE...
+                        p Keep scrolling to show the result
+                .question.none
+                    .result
+                        p Your personality type is
+                        h1(style="margin: 0") TRIANGLE
+                .question
+                    .result_left
+                        svg(xmlns="http://www.w3.org/2000/svg" version="1.1")                         
+                    .result_right
+                        .title
+                            p Your personality type is
+                            h1 TRIANGLE
+                            
+                        
+                    

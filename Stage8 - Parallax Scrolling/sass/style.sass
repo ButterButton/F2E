@@ -27,9 +27,6 @@ html,body
 	margin: 0
 	padding: 0
 	background-color: $main
-	// display: flex
-	// align-items: center
-	// justify-content: center
 	box-sizing: border-box
 	overflow: hidden
 	
@@ -220,20 +217,17 @@ html,body
 						r: calc(100% / 4)
 						fill: $light
 			.result
-				width: 100%
-				height: 100%
-				svg
-					width: 100%
-					height: 100%
-					text 
-						fill: $light
-						x: 500
-						y: 800
-						font-size: $title
-						tspan
-							font-size: $subtitle2
-					polygon
-						fill: $dark
-
+				width: calc(100% / 2)
+				height: calc(100% / 4)
+				text-align: center
+				color: $light
+				
+				transform: translate(calc(100% / 2),calc(100%))
+				h1
+					margin-bottom: 0
+					font-size: $title
+				p
+					margin: 0
+					font-size: $subtitle2
 		.none
 			display: none
