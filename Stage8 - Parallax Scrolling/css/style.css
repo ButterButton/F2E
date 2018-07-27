@@ -222,5 +222,46 @@ html, body {
         #app .container .question .result p {
           margin: 0;
           font-size: 24px; }
+      #app .container .question .result_left {
+        width: calc(100% / 10 * 5);
+        float: left;
+        height: 100%; }
+        #app .container .question .result_left svg {
+          width: 100%;
+          height: 100%; }
+      #app .container .question .result_right {
+        width: calc(100% / 10 * 5);
+        float: right;
+        height: 100%; }
+        #app .container .question .result_right .title {
+          color: #FFF;
+          margin-top: 10%; }
+          #app .container .question .result_right .title p {
+            font-size: 24px;
+            line-height: 24px; }
+          #app .container .question .result_right .title h1 {
+            font-size: 64px;
+            margin: 0; }
+        #app .container .question .result_right ul {
+          color: #0027C8;
+          font-size: 36px;
+          list-style: none; }
+          #app .container .question .result_right ul li {
+            margin-bottom: 20px; }
+        #app .container .question .result_right p {
+          color: #FFF;
+          width: 380px;
+          font-size: 20px; }
+        #app .container .question .result_right button {
+          width: 380px;
+          height: 55px;
+          margin-bottom: 16px;
+          background-color: transparent;
+          border-radius: 30.5px;
+          border: 2px solid #FFF;
+          cursor: pointer;
+          font-size: 20px;
+          color: #FFF;
+          margin-top: 5%; }
     #app .container .none {
       display: none; }
