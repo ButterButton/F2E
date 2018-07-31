@@ -1,0 +1,79 @@
+//Color
+$main: #250060
+$second: #6900D1
+$font: #FFFFFF
+$body: #FF0093
+$skill: #8000FF
+
+//Font
+$h1: 48px
+$h2: 36px
+$h3: 16px
+$par: 16px
+$remark: 14px
+
+*
+	font-family: 'Jua', sans-serif, '微軟正黑體'
+	outline: none
+
+@mixin left_containr_margin($l_top, $l_left)
+    margin-top: $l_top   
+    margin-left: $l_left
+
+.container-fluid
+    width: 100%
+    height: 100%
+    background-color: $main
+    .row
+        .col-md-4
+            .title
+                width: 60%
+                +left_containr_margin(5%,5%)
+                h1 
+                    font-size: $h1
+                    color: $body
+            .status
+                .info
+                    background-color: $skill
+                    width: 30%
+                    text-align: center
+                    +left_containr_margin(5%,10%)
+                    p
+                        font-size: $par
+                        color: $main
+                        text-align: center
+                .level
+                    width: 40%
+                    +left_containr_margin(5%,10%)
+                    h2
+                        font-size: $h2
+                        color: $font
+                        text-decoration: underline
+                        text-decoration-color: $second
+            .show
+                +left_containr_margin(5%,10%)
+            .dialogue
+                border: solid 1px $body
+                width: 60%
+                +left_containr_margin(10%,10%)
+                padding: 20px
+                position: relative
+                &:before
+                    content: ''
+                    display: block
+                    position: absolute
+                    top: -20px
+                    left: 80px
+                    border-left: 20px solid transparent 
+                    border-right: 20px solid transparent
+                    border-bottom: 20px solid $body
+                p
+                    color: $font
+                    font-size: $par
+            .skill
+            .arrow
+                margin-left: 7%
+                i
+                    font-size: 50px   
+                    color: $font
+                    
