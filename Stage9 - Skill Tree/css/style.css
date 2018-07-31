@@ -55,8 +55,16 @@
     .container-fluid .row .col-md-4 .dialogue p {
       color: #FFFFFF;
       font-size: 16px; }
+  .container-fluid .row .col-md-4 .skill .group {
+    display: inline-block;
+    margin-left: 5%; }
+    .container-fluid .row .col-md-4 .skill .group i {
+      font-size: 50px;
+      color: #FFF; }
   .container-fluid .row .col-md-4 .arrow {
-    margin-left: 7%; }
+    margin-top: 2%;
+    margin-left: 6%;
+    margin-bottom: 3%; }
     .container-fluid .row .col-md-4 .arrow i {
       font-size: 50px;
       color: #FFFFFF; }
