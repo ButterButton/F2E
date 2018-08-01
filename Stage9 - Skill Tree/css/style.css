@@ -3,68 +3,193 @@
   font-family: 'Jua', sans-serif, '微軟正黑體';
   outline: none; }
 
+html, body {
+  margin: 0;
+  padding: 0; }
+
 .container-fluid {
-  width: 100%;
-  height: 100%;
-  background-color: #250060; }
-  .container-fluid .row .col-md-4 .title {
-    width: 60%;
-    margin-top: 5%;
-    margin-left: 5%; }
-    .container-fluid .row .col-md-4 .title h1 {
-      font-size: 48px;
-      color: #FF0093; }
-  .container-fluid .row .col-md-4 .status .info {
-    background-color: #8000FF;
-    width: 30%;
-    text-align: center;
-    margin-top: 5%;
-    margin-left: 10%; }
-    .container-fluid .row .col-md-4 .status .info p {
-      font-size: 16px;
-      color: #250060;
+  background: linear-gradient(to right, #250060, black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box; }
+  .container-fluid .col-md-4 {
+    width: calc(100% / 3); }
+    .container-fluid .col-md-4 .title {
+      width: 60%;
+      margin-top: 5%;
+      margin-right: 5%; }
+      .container-fluid .col-md-4 .title h1 {
+        font-size: 48px;
+        color: #FF0093; }
+    .container-fluid .col-md-4 .status .info {
+      background-color: #8000FF;
+      width: 30%;
+      text-align: center;
+      margin-top: 5%;
+      margin-right: 10%; }
+      .container-fluid .col-md-4 .status .info p {
+        font-size: 16px;
+        color: #250060;
+        text-align: center; }
+    .container-fluid .col-md-4 .status .level {
+      width: 40%;
+      margin-top: 5%;
+      margin-right: 10%; }
+      .container-fluid .col-md-4 .status .level h2 {
+        font-size: 36px;
+        color: #FFFFFF;
+        text-decoration: underline;
+        text-decoration-color: #6900D1; }
+    .container-fluid .col-md-4 .show {
+      margin-top: 5%;
+      margin-right: 10%; }
+    .container-fluid .col-md-4 .dialogue {
+      border: solid 1px #FF0093;
+      width: 60%;
+      margin-top: 10%;
+      margin-right: 10%;
+      padding: 20px;
+      position: relative; }
+      .container-fluid .col-md-4 .dialogue:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: -20px;
+        left: 80px;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-bottom: 20px solid #FF0093; }
+      .container-fluid .col-md-4 .dialogue p {
+        color: #FFFFFF;
+        font-size: 16px; }
+    .container-fluid .col-md-4 .skill {
+      width: 100%;
+      position: relative;
+      margin-bottom: 5%; }
+      .container-fluid .col-md-4 .skill:before {
+        content: '';
+        border-width: 20px 35px 0;
+        border-style: solid;
+        border-color: #35006a transparent transparent;
+        position: absolute;
+        top: 100px;
+        left: 15px; }
+      .container-fluid .col-md-4 .skill img {
+        cursor: pointer; }
+      .container-fluid .col-md-4 .skill .item {
+        width: 200px;
+        float: right;
+        transform: translateX(-70%); }
+        .container-fluid .col-md-4 .skill .item .list {
+          text-align: center;
+          display: inline-block; }
+          .container-fluid .col-md-4 .skill .item .list .item-skill {
+            background-color: rgba(255, 255, 255, 0.1);
+            width: 50px;
+            height: 50px;
+            cursor: pointer; }
+            .container-fluid .col-md-4 .skill .item .list .item-skill i {
+              font-size: 50px;
+              color: #FFF; }
+          .container-fluid .col-md-4 .skill .item .list .item-list {
+            margin-top: 1%;
+            cursor: pointer; }
+            .container-fluid .col-md-4 .skill .item .list .item-list i {
+              font-size: 14px;
+              color: #FFF; }
+            .container-fluid .col-md-4 .skill .item .list .item-list span {
+              font-size: 14px;
+              color: #FFF; }
+      .container-fluid .col-md-4 .skill .clear {
+        clear: both; }
+      .container-fluid .col-md-4 .skill .item-2 {
+        transform: translateX(-70%);
+        width: 200px; }
+    .container-fluid .col-md-4 .skill-2 {
+      position: relative;
+      opacity: 0.3; }
+      .container-fluid .col-md-4 .skill-2:before {
+        content: '';
+        border-width: 20px 35px 0;
+        border-style: solid;
+        border-color: #35006a transparent transparent;
+        position: absolute;
+        top: 180px;
+        left: 15px; }
+      .container-fluid .col-md-4 .skill-2:after {
+        content: "";
+        width: 38px;
+        height: 80%;
+        background-color: #35006a;
+        position: absolute;
+        bottom: -80%;
+        left: 6%; }
+    .container-fluid .col-md-4 .skill-3 {
+      margin-top: 20%;
+      position: relative;
+      opacity: 0.3; }
+      .container-fluid .col-md-4 .skill-3:before {
+        content: '';
+        border-width: 20px 35px 0;
+        border-style: solid;
+        border-color: #35006a transparent transparent;
+        position: absolute;
+        top: 180px;
+        left: 15px; }
+      .container-fluid .col-md-4 .skill-3:after {
+        content: "";
+        width: 38px;
+        height: 80%;
+        background-color: #35006a;
+        position: absolute;
+        bottom: -80%;
+        left: 6%; }
+    .container-fluid .col-md-4 .skill-4 {
+      margin-top: 20%;
+      opacity: 0.3; }
+    .container-fluid .col-md-4 .block {
+      border: solid 2px #FF0093;
+      height: 700px;
+      width: 300px;
       text-align: center; }
-  .container-fluid .row .col-md-4 .status .level {
-    width: 40%;
-    margin-top: 5%;
-    margin-left: 10%; }
-    .container-fluid .row .col-md-4 .status .level h2 {
-      font-size: 36px;
-      color: #FFFFFF;
-      text-decoration: underline;
-      text-decoration-color: #6900D1; }
-  .container-fluid .row .col-md-4 .show {
-    margin-top: 5%;
-    margin-left: 10%; }
-  .container-fluid .row .col-md-4 .dialogue {
-    border: solid 1px #FF0093;
-    width: 60%;
-    margin-top: 10%;
-    margin-left: 10%;
-    padding: 20px;
-    position: relative; }
-    .container-fluid .row .col-md-4 .dialogue:before {
-      content: '';
-      display: block;
-      position: absolute;
-      top: -20px;
-      left: 80px;
-      border-left: 20px solid transparent;
-      border-right: 20px solid transparent;
-      border-bottom: 20px solid #FF0093; }
-    .container-fluid .row .col-md-4 .dialogue p {
-      color: #FFFFFF;
-      font-size: 16px; }
-  .container-fluid .row .col-md-4 .skill .group {
-    display: inline-block;
-    margin-left: 5%; }
-    .container-fluid .row .col-md-4 .skill .group i {
-      font-size: 50px;
-      color: #FFF; }
-  .container-fluid .row .col-md-4 .arrow {
-    margin-top: 2%;
-    margin-left: 6%;
-    margin-bottom: 3%; }
-    .container-fluid .row .col-md-4 .arrow i {
-      font-size: 50px;
-      color: #FFFFFF; }
+      .container-fluid .col-md-4 .block .skill-block {
+        height: 300px;
+        background-color: #8000FF; }
+        .container-fluid .col-md-4 .block .skill-block .skill-title {
+          padding-top: 20%; }
+          .container-fluid .col-md-4 .block .skill-block .skill-title i {
+            font-size: 100px;
+            color: #FFFFFF; }
+          .container-fluid .col-md-4 .block .skill-block .skill-title h2 {
+            color: #FFFFFF;
+            font-size: 36px; }
+      .container-fluid .col-md-4 .block .select-block {
+        background-color: #6900D1;
+        height: 400px; }
+        .container-fluid .col-md-4 .block .select-block .select-title {
+          padding-top: 20%; }
+          .container-fluid .col-md-4 .block .select-block .select-title i {
+            font-size: 70px;
+            color: #FFFFFF; }
+          .container-fluid .col-md-4 .block .select-block .select-title p {
+            color: #FFFFFF;
+            font-size: 16px; }
+        .container-fluid .col-md-4 .block .select-block .select {
+          width: 200px;
+          margin: 0 auto; }
+          .container-fluid .col-md-4 .block .select-block .select button {
+            width: 100%;
+            height: 35px;
+            margin-bottom: 5%;
+            background-color: transparent;
+            border: solid 2px #FFFFFF;
+            font-size: 16px;
+            color: #FFFFFF;
+            cursor: pointer; }
+          .container-fluid .col-md-4 .block .select-block .select .click {
+            background-color: #FF0093;
+            border: solid 2px #FF0093; }

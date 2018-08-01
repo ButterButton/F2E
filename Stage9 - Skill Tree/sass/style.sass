@@ -12,76 +12,204 @@ $h3: 16px
 $par: 16px
 $remark: 14px
 
-*
-	font-family: 'Jua', sans-serif, '微軟正黑體'
-	outline: none
-
 @mixin left_containr_margin($l_top, $l_left)
     margin-top: $l_top   
-    margin-left: $l_left
+    margin-right: $l_left
+
+*
+    font-family: 'Jua', sans-serif, '微軟正黑體'
+    outline: none
+    
+html,body
+    margin: 0
+    padding: 0
+
 
 .container-fluid
-    width: 100%
-    height: 100%
-    background-color: $main
-    .row
-        .col-md-4
-            .title
-                width: 60%
-                +left_containr_margin(5%,5%)
-                h1 
-                    font-size: $h1
-                    color: $body
-            .status
-                .info
-                    background-color: $skill
-                    width: 30%
-                    text-align: center
-                    +left_containr_margin(5%,10%)
-                    p
-                        font-size: $par
-                        color: $main
-                        text-align: center
-                .level
-                    width: 40%
-                    +left_containr_margin(5%,10%)
-                    h2
-                        font-size: $h2
-                        color: $font
-                        text-decoration: underline
-                        text-decoration-color: $second
-            .show
+    background: linear-gradient(to right, $main, black)
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100vw
+    height: 100vh
+    padding: 20px
+    box-sizing: border-box
+    .col-md-4
+        width: calc(100% / 3)
+        .title
+            width: 60%
+            +left_containr_margin(5%,5%)
+            h1 
+                font-size: $h1
+                color: $body
+        .status
+            .info
+                background-color: $skill
+                width: 30%
+                text-align: center
                 +left_containr_margin(5%,10%)
-            .dialogue
-                border: solid 1px $body
-                width: 60%
-                +left_containr_margin(10%,10%)
-                padding: 20px
-                position: relative
-                &:before
-                    content: ''
-                    display: block
-                    position: absolute
-                    top: -20px
-                    left: 80px
-                    border-left: 20px solid transparent 
-                    border-right: 20px solid transparent
-                    border-bottom: 20px solid $body
                 p
-                    color: $font
                     font-size: $par
-            .skill
-                .group
-                    display: inline-block
-                    margin-left: 5%
-                    i
-                        font-size: 50px
-                        color: #FFF
-            .arrow
-                margin-top: 2%
-                margin-left: 6%
-                margin-bottom: 3%
-                i
-                    font-size: 50px   
+                    color: $main
+                    text-align: center
+            .level
+                width: 40%
+                +left_containr_margin(5%,10%)
+                h2
+                    font-size: $h2
                     color: $font
+                    text-decoration: underline
+                    text-decoration-color: $second
+        .show
+            +left_containr_margin(5%,10%)
+        .dialogue
+            border: solid 1px $body
+            width: 60%
+            +left_containr_margin(10%,10%)
+            padding: 20px
+            position: relative
+            &:before
+                content: ''
+                display: block
+                position: absolute
+                top: -20px
+                left: 80px
+                border-left: 20px solid transparent 
+                border-right: 20px solid transparent
+                border-bottom: 20px solid $body
+            p
+                color: $font
+                font-size: $par
+        .skill
+            width: 100%
+            position: relative
+            margin-bottom: 5%
+            &:before
+                content: ''
+                border-width: 20px 35px 0
+                border-style: solid
+                border-color: #35006a transparent transparent 
+                position: absolute
+                // z-index: -1
+                top: 100px
+                left: 15px
+            img
+                cursor: pointer
+            .item
+                width: 200px
+                float: right
+                transform: translateX(-70%)
+                .list
+                    text-align: center
+                    display: inline-block
+                    .item-skill
+                        background-color: hsla(0,0%,100%,0.1)
+                        width: 50px
+                        height: 50px
+                        cursor: pointer
+                        i
+                            font-size: 50px
+                            color: #FFF  
+                    .item-list
+                        margin-top: 1%
+                        cursor: pointer
+                        i
+                            font-size: 14px
+                            color: #FFF
+                        span
+                            font-size: 14px
+                            color: #FFF
+            .clear
+                clear: both
+            .item-2
+                transform: translateX(-70%)
+                width: 200px
+        .skill-2
+            position: relative
+            opacity: 0.3
+            &:before
+                content: ''
+                border-width: 20px 35px 0
+                border-style: solid
+                border-color: #35006a transparent transparent 
+                position: absolute
+                // z-index: -1
+                top: 180px
+                left: 15px
+            &:after
+                content: ""
+                width: 38px
+                height: 80%
+                background-color: #35006a
+                position: absolute
+                bottom: -80%
+                left: 6%
+        .skill-3
+            margin-top: 20%
+            position: relative
+            opacity: 0.3
+            &:before
+                content: ''
+                border-width: 20px 35px 0
+                border-style: solid
+                border-color: #35006a transparent transparent 
+                position: absolute
+                // z-index: -1
+                top: 180px
+                left: 15px
+            &:after
+                content: ""
+                width: 38px
+                height: 80%
+                background-color: #35006a
+                position: absolute
+                bottom: -80%
+                left: 6%
+        .skill-4
+            margin-top: 20%
+            opacity: 0.3
+        .block
+            border: solid 2px $body
+            height: 700px
+            width: 300px
+            text-align: center
+            .skill-block
+                height: 300px
+                background-color: $skill
+                .skill-title
+                    padding-top: 20%
+                    i
+                        font-size: 100px
+                        color: $font
+                    h2
+                        color: $font
+                        font-size: 36px
+            .select-block
+                background-color: $second
+                height: 400px
+                .select-title
+                    padding-top: 20%
+                    i
+                        font-size: 70px
+                        color: $font
+                    p
+                        color: $font
+                        font-size: $par
+                .select
+                    width: 200px
+                    margin: 0 auto                
+                    button
+                        width: 100%
+                        height: 35px
+                        margin-bottom: 5%
+                        background-color: transparent
+                        border: solid 2px $font
+                        font-size: $par
+                        color: $font
+                        cursor: pointer
+                    .click
+                        background-color: $body
+                        border: solid 2px $body
+
+
                     
