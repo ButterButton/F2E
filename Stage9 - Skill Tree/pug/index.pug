@@ -26,7 +26,7 @@ html(lang="en")
                 .skill
                     img(src="../pic/img-planet-basics.png")
                     .item
-                        .list
+                        .list1.list
                             .item-skill
                                 i.fab.fa-html5
                             .item-list
@@ -34,16 +34,16 @@ html(lang="en")
                                 span 0/3
                             .item-list
                                 i.far.fa-dot-circle
-                                span 0/3
-                        .list
+                                span 0/0
+                        .list2.list
                             .item-skill
                                 i.fas.fa-wrench
                             .item-list
                                 i.fas.fa-cog
-                                span 0/3
+                                span 0/4
                             .item-list
                                 i.far.fa-dot-circle
-                                span 0/3
+                                span 0/0
                     .clear                               
                 .skill.skill-2
                     img(src="../pic/img-planet-css.png")
@@ -172,7 +172,7 @@ html(lang="en")
                                 i.far.fa-dot-circle
                                 span 0/3    
             .col-md-4
-                .block
+                #b1.block
                     .skill-block
                         .skill-title
                             i.fab.fa-html5
@@ -182,9 +182,24 @@ html(lang="en")
                             i.fas.fa-cog
                             p RECOMMENDED
                         .select
-                            button(onclick="skill_btn(this)") Learn HTML
-                            button(onclick="skill_btn(this)") Basics of CSS
-                            button(onclick="skill_btn(this)") Basics of JavaScript
+                            button(onclick="ChangeCss(this)") Learn HTML
+                            button(onclick="ChangeCss(this)") Basics of CSS
+                            button(onclick="ChangeCss(this)") Basics of JavaScript
+                #b2.block.none
+                    .skill-block
+                        .skill-title
+                            i.fas.fa-wrench
+                            h2 BASIC TOOLS
+                    .select-block
+                        .select-title
+                            i.fas.fa-cog
+                            p RECOMMENDED
+                        .select
+                            button(onclick="ChangeCss(this)") Git - Version Control
+                            button(onclick="ChangeCss(this)") Basic Terminal Usage
+                            button(onclick="ChangeCss(this)") Text Editor
+                            button(onclick="ChangeCss(this)") A Heart of Reserching
+
         script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
         script(src='js/main.js')
 

@@ -31,15 +31,15 @@
       <div class="col-md-4">
         <div class="skill"><img src="../pic/img-planet-basics.png"/>
           <div class="item">
-            <div class="list">
+            <div class="list1 list">
               <div class="item-skill"><i class="fab fa-html5"></i></div>
               <div class="item-list"><i class="fas fa-cog"></i><span>0/3</span></div>
-              <div class="item-list"><i class="far fa-dot-circle"></i><span>0/3</span></div>
+              <div class="item-list"><i class="far fa-dot-circle"></i><span>0/0</span></div>
             </div>
-            <div class="list">
+            <div class="list2 list">
               <div class="item-skill"><i class="fas fa-wrench"></i></div>
-              <div class="item-list"><i class="fas fa-cog"></i><span>0/3</span></div>
-              <div class="item-list"><i class="far fa-dot-circle"></i><span>0/3</span></div>
+              <div class="item-list"><i class="fas fa-cog"></i><span>0/4</span></div>
+              <div class="item-list"><i class="far fa-dot-circle"></i><span>0/0</span></div>
             </div>
           </div>
           <div class="clear">                              </div>
@@ -123,7 +123,7 @@
         </div>
       </div>
       <div class="col-md-4">
-        <div class="block">
+        <div class="block" id="b1">
           <div class="skill-block">
             <div class="skill-title"><i class="fab fa-html5"></i>
               <h2>BASIC SKILLS</h2>
@@ -134,9 +134,27 @@
               <p>RECOMMENDED</p>
             </div>
             <div class="select">
-              <button onclick="skill_btn(this)">Learn HTML</button>
-              <button onclick="skill_btn(this)">Basics of CSS</button>
-              <button onclick="skill_btn(this)">Basics of JavaScript</button>
+              <button onclick="ChangeCss(this)">Learn HTML</button>
+              <button onclick="ChangeCss(this)">Basics of CSS</button>
+              <button onclick="ChangeCss(this)">Basics of JavaScript</button>
+            </div>
+          </div>
+        </div>
+        <div class="block none" id="b2">
+          <div class="skill-block">
+            <div class="skill-title"><i class="fas fa-wrench"></i>
+              <h2>BASIC TOOLS</h2>
+            </div>
+          </div>
+          <div class="select-block">
+            <div class="select-title"><i class="fas fa-cog"></i>
+              <p>RECOMMENDED</p>
+            </div>
+            <div class="select">
+              <button onclick="ChangeCss(this)">Git - Version Control</button>
+              <button onclick="ChangeCss(this)">Basic Terminal Usage</button>
+              <button onclick="ChangeCss(this)">Text Editor</button>
+              <button onclick="ChangeCss(this)">A Heart of Reserching</button>
             </div>
           </div>
         </div>

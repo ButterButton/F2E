@@ -193,3 +193,5 @@ html, body {
           .container-fluid .col-md-4 .block .select-block .select .click {
             background-color: #FF0093;
             border: solid 2px #FF0093; }
+  .container-fluid .none {
+    display: none; }

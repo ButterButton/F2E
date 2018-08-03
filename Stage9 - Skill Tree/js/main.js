@@ -1,29 +1,49 @@
-function skill_btn(c) {
+var num = 0
+
+// $('button').click(function () {
+//   if (!$(this).hasClass('click')) {
+//     num++
+//     $(this).addClass('click')
+//     $('span:eq(2)').text(num + '/4')
+//   } else {
+//     $(this).removeClass('click')
+//     num--
+//     $('span:eq(2)').text(num + '/4')
+//   }
+// })
+
+
+function ChangeCss(c) {
   if (!$(c).hasClass('click')) {
+    num++
     $(c).addClass('click')
+    $('span:eq(2)').text(num + '/4')
   } else {
     $(c).removeClass('click')
+    num--
+    $('span:eq(2)').text(num + '/4')
   }
 }
-// 鎖右健
-$(document).ready(function() {
-  $('.list').bind('contextmenu', function(event) {
-    return false
-  })
-})
 
-/*
-  1 = Left   mouse button
-  2 = Centre mouse button
-  3 = Right  mouse button
-*/
-$('.list').mousedown(function(event) {
-  switch (event.which) {
-    case 1:
-      console.log('左鍵')
-      break
-    case 3:
-      console.log('右鍵')
-      break
-  }
-})
+// function CatchId() {
+//   $("div[id^='list_']").each(function () {
+//     var test = $(this).prop('id')
+//     console.log(test)
+//   })
+// }
+// CatchId()
+
+function Switch_Div() {
+  $('.list').click(function () {
+    if ($(this).hasClass('list1')) {
+      $('#b1').removeClass('none')
+      $('#b2').addClass('none')
+      console.log('1')
+    } else if ($(this).hasClass('list2')) {
+      $('#b2').removeClass('none')
+      $('#b1').addClass('none')
+      console.log('2')
+    }
+  })
+}
+Switch_Div()
