@@ -1,17 +1,18 @@
 var num = 0
 
-// $('button').click(function () {
-//   if (!$(this).hasClass('click')) {
-//     num++
-//     $(this).addClass('click')
-//     $('span:eq(2)').text(num + '/4')
-//   } else {
-//     $(this).removeClass('click')
-//     num--
-//     $('span:eq(2)').text(num + '/4')
-//   }
-// })
-
+// function ChangeCss() {
+//   $('button').click(function () {
+//     if (!$(this).hasClass('click')) {
+//       num++
+//       $(this).addClass('click')
+//       $('span:eq(2)').text(num + '/4')
+//     } else {
+//       $(this).removeClass('click')
+//       num--
+//       $('span:eq(2)').text(num + '/4')
+//     }
+//   })
+// }
 
 function ChangeCss(c) {
   if (!$(c).hasClass('click')) {
@@ -33,7 +34,7 @@ function ChangeCss(c) {
 // }
 // CatchId()
 
-function Switch_Div() {
+function SwitchDiv() {
   $('.list').click(function () {
     if ($(this).hasClass('list1')) {
       $('#b1').removeClass('none')
@@ -46,4 +47,4 @@ function Switch_Div() {
     }
   })
 }
-Switch_Div()
+SwitchDiv()
