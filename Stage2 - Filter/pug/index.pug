@@ -3,7 +3,7 @@ html(lang="en")
     head
         - var name = 'Stage2 - Filter'
         meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
+        meta(name="viewport", content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         title= name
         link(rel='stylesheet prefetch' href='https://use.fontawesome.com/releases/v5.0.13/css/all.css')
@@ -31,15 +31,16 @@ html(lang="en")
                             option(value="") 麻豆區
                     .categories
                         h3 Categories
-                        form(action="")
-                            input(type="checkbox")
-                            label(for="") All
-                        form(action="")
-                            input(type="checkbox")
-                            label(for="") 歷史古蹟
-                        form(action="")
-                            input(type="checkbox")
-                            label(for="") 宗教廟宇
+                        .categorie
+                            form(action="")
+                                input(type="checkbox")
+                                label(for="") All
+                            form(action="")
+                                input(type="checkbox")
+                                label(for="") 歷史古蹟
+                            form(action="")
+                                input(type="checkbox")
+                                label(for="") 宗教廟宇
                 .right_column
                     .info
                         h3 Show $num results by                        

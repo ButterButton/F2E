@@ -17,7 +17,8 @@ html, body {
   .container header {
     background-color: #D7D7D7;
     position: relative;
-    height: 130px; }
+    height: 130px;
+    width: 100%; }
     .container header .logo {
       position: absolute;
       font-size: 36px;
@@ -54,93 +55,178 @@ html, body {
       .container header .search input::-webkit-input-placeholder {
         color: #fff;
         font-size: 20px; }
-  .container .main .left_column {
-    margin-left: 5%;
-    width: 300px;
-    background-color: #EBEBEB;
-    display: inline-block; }
-    .container .main .left_column .location {
-      padding-left: 40px;
-      padding-top: 5px;
-      border-bottom: 1px solid;
-      padding-bottom: 20px; }
-      .container .main .left_column .location h3 {
-        font-size: 20px; }
-      .container .main .left_column .location select {
-        border-radius: 2px;
-        width: 200px;
-        height: 40px; }
-    .container .main .left_column .categories {
-      padding-left: 40px;
-      padding-top: 5px; }
-      .container .main .left_column .categories h3 {
-        font-size: 20px; }
-      .container .main .left_column .categories select {
-        border-radius: 2px;
-        width: 200px;
-        height: 40px; }
-  .container .main .right_column {
-    width: 830px;
-    display: inline-block;
-    vertical-align: top; }
-    .container .main .right_column .info {
-      margin-left: 20px; }
-      .container .main .right_column .info ul {
-        list-style: none;
-        padding: 0; }
-        .container .main .right_column .info ul li {
-          display: inline-block;
-          border: solid 1px #D7D7D7;
-          padding: 5px 15px;
-          border-radius: 100px; }
-          .container .main .right_column .info ul li:hover {
-            background-color: #D7D7D7; }
-          .container .main .right_column .info ul li .close {
-            cursor: pointer;
-            font-size: 15px; }
-    .container .main .right_column .block {
-      height: 220px;
-      width: 800px;
-      background-color: #fff;
-      margin-left: 20px;
-      margin-bottom: 20px;
-      cursor: pointer; }
-      .container .main .right_column .block:hover {
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-        transition: 0.3s; }
-      .container .main .right_column .block .main_img {
-        height: 100%;
-        width: 220px;
-        background-color: yellow;
-        display: inline-block; }
-      .container .main .right_column .block .main_content {
-        margin: 0;
-        width: calc(100% - 300px);
-        display: inline-block;
-        vertical-align: top;
-        padding-left: 20px; }
-        .container .main .right_column .block .main_content .title {
-          text-align: center; }
-          .container .main .right_column .block .main_content .title h3 {
-            font-size: 24px; }
-        .container .main .right_column .block .main_content .brief {
-          margin-top: -20px;
-          height: 60px;
-          overflow: hidden; }
-          .container .main .right_column .block .main_content .brief p {
-            font-size: 16px;
-            line-height: 24px;
-            text-align: left; }
-        .container .main .right_column .block .main_content .list {
-          margin-top: 20px; }
-        .container .main .right_column .block .main_content .item {
-          margin-top: 20px; }
-          .container .main .right_column .block .main_content .item .place {
-            display: inline-block; }
-            .container .main .right_column .block .main_content .item .place span {
-              margin-left: 5px; }
-          .container .main .right_column .block .main_content .item .tel {
+  .container .main {
+    width: 100%; }
+    .container .main .left_column {
+      margin-left: 5%;
+      width: 30%;
+      background-color: #EBEBEB;
+      display: inline-block; }
+      .container .main .left_column .location {
+        padding-left: 40px;
+        padding-top: 5px;
+        border-bottom: 1px solid;
+        padding-bottom: 20px; }
+        .container .main .left_column .location h3 {
+          font-size: 20px; }
+        .container .main .left_column .location select {
+          border-radius: 2px;
+          width: 60%;
+          height: 40px; }
+      .container .main .left_column .categories {
+        padding-left: 40px;
+        padding-top: 5px; }
+        .container .main .left_column .categories h3 {
+          font-size: 20px; }
+        .container .main .left_column .categories select {
+          border-radius: 2px;
+          width: 200px;
+          height: 40px; }
+    .container .main .right_column {
+      width: 60%;
+      display: inline-block;
+      vertical-align: top; }
+      .container .main .right_column .info {
+        margin-left: 20px; }
+        .container .main .right_column .info ul {
+          list-style: none;
+          padding: 0; }
+          .container .main .right_column .info ul li {
             display: inline-block;
-            margin-left: 30%; }
-            .container .main .right_column .block .main_content .item .tel span {
-              margin-left: 5px; }
+            border: solid 1px #D7D7D7;
+            padding: 5px 15px;
+            border-radius: 100px; }
+            .container .main .right_column .info ul li:hover {
+              background-color: #D7D7D7; }
+            .container .main .right_column .info ul li .close {
+              cursor: pointer;
+              font-size: 15px; }
+      .container .main .right_column .block {
+        height: 220px;
+        width: 100%;
+        background-color: #fff;
+        margin-left: 20px;
+        margin-bottom: 20px;
+        cursor: pointer; }
+        .container .main .right_column .block:hover {
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+          transition: 0.3s; }
+        .container .main .right_column .block .main_img {
+          height: 100%;
+          width: 220px;
+          background-color: yellow;
+          display: inline-block; }
+        .container .main .right_column .block .main_content {
+          margin: 0;
+          width: calc(100% - 300px);
+          display: inline-block;
+          vertical-align: top;
+          padding-left: 20px; }
+          .container .main .right_column .block .main_content .title {
+            text-align: center; }
+            .container .main .right_column .block .main_content .title h3 {
+              font-size: 24px; }
+          .container .main .right_column .block .main_content .brief {
+            margin-top: -20px;
+            height: 60px;
+            overflow: hidden; }
+            .container .main .right_column .block .main_content .brief p {
+              font-size: 16px;
+              line-height: 24px;
+              text-align: left;
+              height: 100%; }
+          .container .main .right_column .block .main_content .list {
+            margin-top: 20px; }
+            .container .main .right_column .block .main_content .list span {
+              border: solid 1px;
+              padding: 5px 15px;
+              border-radius: 100px;
+              background-color: #D7D7D7;
+              color: #fff; }
+          .container .main .right_column .block .main_content .item {
+            margin-top: 20px; }
+            .container .main .right_column .block .main_content .item .place {
+              display: inline-block; }
+              .container .main .right_column .block .main_content .item .place span {
+                margin-left: 5px; }
+            .container .main .right_column .block .main_content .item .tel {
+              display: inline-block;
+              margin-left: 30%; }
+              .container .main .right_column .block .main_content .item .tel span {
+                margin-left: 5px; }
+
+@media screen and (max-width: 1024px) {
+  .container {
+    max-width: 1024px;
+    height: initial; } }
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 768px;
+    height: initial; }
+    .container .main {
+      width: 100%; }
+      .container .main .right_column {
+        padding-right: 10px; }
+        .container .main .right_column .block {
+          width: 100%;
+          height: 450px; }
+          .container .main .right_column .block .main_img {
+            height: 50%;
+            width: 100%; }
+          .container .main .right_column .block .main_content {
+            width: 100%;
+            height: 50%; } }
+
+@media screen and (max-width: 414px) {
+  .container {
+    max-width: 414px;
+    height: initial; }
+    .container header {
+      height: 70px; }
+      .container header .logo {
+        left: 50%; }
+      .container header .search {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: black; }
+        .container header .search input {
+          border-bottom: 2px solid black; }
+        .container header .search input::-webkit-input-placeholder {
+          color: #9B9B9B; }
+    .container .main {
+      width: 100%; }
+      .container .main .left_column {
+        width: 100%;
+        display: block;
+        margin: 0;
+        margin-bottom: 10px; }
+        .container .main .left_column .location {
+          text-align: center;
+          padding: 0;
+          padding-bottom: 10px; }
+        .container .main .left_column .categories {
+          padding: 0;
+          padding-bottom: 10px;
+          border-bottom: 1px solid; }
+          .container .main .left_column .categories h3 {
+            text-align: center; }
+          .container .main .left_column .categories .categorie {
+            transform: translateX(40%); }
+      .container .main .right_column {
+        width: 100%;
+        padding: 0; }
+        .container .main .right_column .info {
+          display: none; }
+        .container .main .right_column .block {
+          width: 100%;
+          height: 450px;
+          margin: 0; }
+          .container .main .right_column .block .main_img {
+            height: 50%;
+            width: 100%; }
+          .container .main .right_column .block .main_content {
+            width: 100%;
+            height: 50%; } }

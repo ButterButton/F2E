@@ -30,6 +30,7 @@ html,body
         background-color: $display
         position: relative
         height: 130px
+        width: 100%
         .logo
             position: absolute
             font-size: $title2
@@ -68,9 +69,10 @@ html,body
                 font-size: $p
 
     .main
+        width: 100%
         .left_column
             margin-left: 5%
-            width: 300px
+            width: 30%
             background-color: $highlight
             display: inline-block
             .location
@@ -82,7 +84,7 @@ html,body
                     font-size: $p
                 select
                     border-radius: 2px 
-                    width: 200px
+                    width: 60%
                     height: 40px
             .categories
                 padding-left: 40px
@@ -94,7 +96,7 @@ html,body
                     width: 200px
                     height: 40px
         .right_column
-            width: 830px
+            width: 60%
             display: inline-block
             vertical-align: top
             .info
@@ -115,7 +117,7 @@ html,body
                             font-size: 15px
             .block
                 height: 220px
-                width: 800px
+                width: 100%
                 background-color: $second
                 margin-left: 20px
                 margin-bottom: 20px
@@ -146,8 +148,15 @@ html,body
                             font-size: 16px
                             line-height: 24px
                             text-align: left
+                            height: 100%
                     .list
                         margin-top: 20px
+                        span
+                            border: solid 1px 
+                            padding: 5px 15px   
+                            border-radius: 100px
+                            background-color: $display
+                            color: $second
                     .item
                         margin-top: 20px
                         .place
@@ -159,6 +168,89 @@ html,body
                             margin-left: 30%
                             span
                                 margin-left: 5px
+
+@media screen and (max-width: 1024px)
+     .container
+        max-width: 1024px
+        height: initial
+        
+
+
+@media screen and (max-width: 768px)
+    .container
+        max-width: 768px
+        height: initial
+        .main
+            width: 100%
+            .right_column
+                padding-right: 10px
+                .block
+                    width: 100%
+                    height: 450px
+                    .main_img
+                        height: 50%
+                        width: 100%
+                    .main_content
+                        width: 100%
+                        height: 50%
+
+
+@media screen and (max-width: 414px)
+    .container
+        max-width: 414px
+        height: initial
+        header
+            height: 70px
+            .logo  
+                left: 50%
+            .search
+                position: absolute
+                left: 50%
+                top: 50%
+                transform: translate(-50%,-50%)
+                color: black
+                input
+                    border-bottom: 2px solid black
+                input::-webkit-input-placeholder
+                    color: #9B9B9B
+        .main
+            width: 100%
+            .left_column
+                width: 100%
+                display: block
+                margin: 0   
+                margin-bottom: 10px  
+                .location   
+                    text-align: center
+                    padding: 0   
+                    padding-bottom: 10px           
+                .categories
+                    padding: 0
+                    padding-bottom: 10px
+                    border-bottom: 1px solid
+                    h3
+                        text-align: center
+                    .categorie
+                        transform: translateX(40%)                       
+            .right_column
+                width: 100%
+                padding: 0
+                .info
+                    display: none
+                .block
+                    width: 100%
+                    height: 450px
+                    margin: 0
+                    .main_img
+                        height: 50%
+                        width: 100%
+                    .main_content
+                        width: 100%
+                        height: 50%
+
+
+    
+
 
 
 
