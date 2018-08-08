@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>Stage2 - Filter</title>
     <link rel="stylesheet prefetch" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"/>
@@ -10,38 +10,46 @@
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
   </head>
   <body>
+    <header>
+      <div class="logo">
+        <p><span class="t">T</span><span class="a">A</span><span class="i">I</span><span class="n">N</span><span class="a2">A</span><span class="n2">N</span></p>
+      </div>
+      <div class="search">
+        <div class="fas fa-search"></div>
+        <input type="text" placeholder="Explore your own activities"/>
+      </div>
+    </header>
     <div class="container">
-      <header>
-        <div class="logo">
-          <p><span class="t">T</span><span class="a">A</span><span class="i">I</span><span class="n">N</span><span class="a2">A</span><span class="n2">N</span></p>
-        </div>
-        <div class="search">
-          <div class="fas fa-search"></div>
-          <input type="text" placeholder="Explore your own activities"/>
-        </div>
-      </header>
       <div class="main">
         <div class="left_column">
           <div class="location">
             <h3>Location</h3>
-            <select>
-              <option value="">麻豆區</option>
-            </select>
+            <select id="select"></select>
           </div>
           <div class="categories">
             <h3>Categories</h3>
             <div class="categorie">
-              <form action="">
+              <form id="form" action="">
                 <input type="checkbox"/>
-                <label for="">All</label>
-              </form>
-              <form action="">
+                <label for="">All</label><br/>
                 <input type="checkbox"/>
-                <label for="">歷史古蹟</label>
-              </form>
-              <form action="">
+                <label for="">歷史古蹟</label><br/>
                 <input type="checkbox"/>
-                <label for="">宗教廟宇</label>
+                <label for="">宗教廟宇</label><br/>
+                <input type="checkbox"/>
+                <label for="">在地藝文</label><br/>
+                <input type="checkbox"/>
+                <label for="">地方展館</label><br/>
+                <input type="checkbox"/>
+                <label for="">戶外運動</label><br/>
+                <input type="checkbox"/>
+                <label for="">休閒農漁</label><br/>
+                <input type="checkbox"/>
+                <label for="">主題園區</label><br/>
+                <input type="checkbox"/>
+                <label for="">公園綠地</label><br/>
+                <input type="checkbox"/>
+                <label for="">生態教育</label>
               </form>
             </div>
           </div>
@@ -49,24 +57,23 @@
         <div class="right_column">
           <div class="info">
             <h3>Show $num results by                        </h3>
-            <ul>
-              <li>歷史古蹟<span class="close"><i class="fa fa-times-circle-o"></i></span></li>
-              <li>宗教廟宇</li>
-            </ul>
+            <ul id="ul"></ul>
           </div>
           <div class="block">
             <div class="main_img"></div>
             <div class="main_content">
               <div class="title">
-                <h3>南鯤鯓代天府</h3>
+                <h3> </h3>
               </div>
               <div class="brief">
-                <p>在許多台南人的記憶當中，對南鯤鯓代天府的印象就是超熱鬧的廟會，每天參拜進香的信徒及慕名而來的遊客不計其數，主要祀奉李、池、吳、朱、范等五位王爺，五位王爺與囝仔公爭地建廟的神話故事至今依然讓很多人津津樂道著，沿海的王爺信仰在這裡展露無遺，2012年11月更是完成了一件創舉，將建廟以來信徒捐贈的大大小小金牌加上廟方添購，共集結了一萬零八百兩黃金，在廟內的凌霄寶殿打造了總價約6億多，也是全球最大的黃金玉旨牌，從1984年開始，至2012年完成，可說是建廟300多年來的超大盛事。\r\n每年固定舉辦的平安鹽祭，在10~11月間就會陸陸續續的舉辦一連串的活動，每年樣子都不同的平安鹽袋更是大家排隊爭著領取收集的熱門紀念品，拿到平安鹽袋後，到廟前廣場的鹽堆拿些鹽裝入，再到香爐過爐，就是納福驅邪的小寶物。 </p>
+                <p></p>
               </div>
-              <div class="list"><span>歷史古蹟</span></div>
+              <div class="list">
+                <!--span-->
+              </div>
               <div class="item">
-                <div class="place"><i class="fas fa-map-marker-alt"></i><span>麻豆區</span></div>
-                <div class="tel"><i class="fas fa-phone"></i><span>06-7863711</span></div>
+                <div class="place"><i class="fas fa-map-marker-alt"></i><span> </span></div>
+                <div class="tel"><i class="fas fa-phone"></i><span> </span></div>
               </div>
             </div>
           </div>
@@ -74,21 +81,53 @@
             <div class="main_img"></div>
             <div class="main_content">
               <div class="title">
-                <h3>南鯤鯓代天府</h3>
+                <h3> </h3>
               </div>
               <div class="brief">
-                <p>在許多台南人的記憶當中，對南鯤鯓代天府的印象就是超熱鬧的廟會，每天參拜進香的信徒及慕名而來的遊客不計其數，主要祀奉李、池、吳、朱、范等五位王爺，五位王爺與囝仔公爭地建廟的神話故事至今依然讓很多人津津樂道著，沿海的王爺信仰在這裡展露無遺，2012年11月更是完成了一件創舉，將建廟以來信徒捐贈的大大小小金牌加上廟方添購，共集結了一萬零八百兩黃金，在廟內的凌霄寶殿打造了總價約6億多，也是全球最大的黃金玉旨牌，從1984年開始，至2012年完成，可說是建廟300多年來的超大盛事。\r\n每年固定舉辦的平安鹽祭，在10~11月間就會陸陸續續的舉辦一連串的活動，每年樣子都不同的平安鹽袋更是大家排隊爭著領取收集的熱門紀念品，拿到平安鹽袋後，到廟前廣場的鹽堆拿些鹽裝入，再到香爐過爐，就是納福驅邪的小寶物。 </p>
+                <p></p>
               </div>
-              <div class="list"><span>歷史古蹟</span></div>
+              <div class="list">
+                <!--span-->
+              </div>
               <div class="item">
-                <div class="place"><i class="fas fa-map-marker-alt"></i><span>麻豆區</span></div>
-                <div class="tel"><i class="fas fa-phone"></i><span>06-7863711</span></div>
+                <div class="place"><i class="fas fa-map-marker-alt"></i><span> </span></div>
+                <div class="tel"><i class="fas fa-phone"></i><span> </span></div>
+              </div>
+            </div>
+          </div>
+          <div class="block">
+            <div class="main_img"></div>
+            <div class="main_content">
+              <div class="title">
+                <h3> </h3>
+              </div>
+              <div class="brief">
+                <p></p>
+              </div>
+              <div class="list">
+                <!--span -->
+              </div>
+              <div class="item">
+                <div class="place"><i class="fas fa-map-marker-alt"></i><span> </span></div>
+                <div class="tel"><i class="fas fa-phone"></i><span> </span></div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <footer>
+        <ul>
+          <li style="border-radius: 4px"><i class="fas fa-angle-double-left"></i></li>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+          <li style="border-radius: 4px"><i class="fas fa-angle-double-right"> </i></li>
+        </ul>
+      </footer>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../js/index.js"></script>
   </body>
 </html>

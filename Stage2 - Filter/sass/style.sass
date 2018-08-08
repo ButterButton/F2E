@@ -19,57 +19,61 @@ html,body
     // max-width: 1024px
     height: 100vh
     margin: 0
-    
+    overflow-x: hidden
+
+header
+    background-color: $display
+    position: relative
+    height: 130px
+    width: 100%
+    margin: 0 auto
+    .logo
+        position: absolute
+        font-size: $title2
+        display: inline-block   
+        left: 30%
+        top: 50%
+        transform: translate(-50%,-50%)
+        p
+            letter-spacing: 5px
+            .t
+                color: #f1b8e4
+            .a
+                color: #fd7d36
+            .i
+                color: rgba(255, 209, 102, 0.8)
+            .n
+                color: rgba(6, 214, 160, 0.8)
+            .a2
+                color: rgba(2,166,209,0.8)
+            .n2 
+                color: #c17151
+    .search
+        display: inline-block
+        position: absolute
+        left: 60%
+        top: 50%
+        transform: translate(-50%,-50%)
+        color: $second
+        input
+            border: none
+            border-bottom: 2px solid $second
+            background: transparent
+            width: 250px
+            outline: none
+        input::-webkit-input-placeholder
+            color: $second
+            font-size: $p
+
 .container
     background-color: $main
-    height: 100%
     max-width: 1200px
     margin: 0 auto
     padding: 0
-    header
-        background-color: $display
-        position: relative
-        height: 130px
-        width: 100%
-        .logo
-            position: absolute
-            font-size: $title2
-            display: inline-block   
-            left: 30%
-            top: 50%
-            transform: translate(-50%,-50%)
-            p
-                letter-spacing: 5px
-                .t
-                    color: #f1b8e4
-                .a
-                    color: #fd7d36
-                .i
-                    color: rgba(255, 209, 102, 0.8)
-                .n
-                    color: rgba(6, 214, 160, 0.8)
-                .a2
-                    color: rgba(2,166,209,0.8)
-                .n2 
-                    color: #c17151
-        .search
-            display: inline-block
-            position: absolute
-            left: 60%
-            top: 50%
-            transform: translate(-50%,-50%)
-            color: $second
-            input
-                border: none
-                border-bottom: 2px solid $second
-                background: transparent
-                width: 250px
-            input::-webkit-input-placeholder
-                color: $second
-                font-size: $p
-
+    position: relative
     .main
         width: 100%
+        padding-bottom: 100px
         .left_column
             margin-left: 5%
             width: 30%
@@ -168,9 +172,29 @@ html,body
                             margin-left: 30%
                             span
                                 margin-left: 5px
+    footer
+        height: 100px
+        width: 100%
+        position: absolute
+        bottom: 0
+        ul
+            height: 40px
+            padding: 0
+            margin-left: 40%
+            text-align: center
+            padding-top: 1%
+            li
+                display: inline-block
+                border: 1px solid #ECEEEF
+                background-color: $second
+                font-size: 16px
+                padding: 5px
+                cursor: pointer
+            
+                    
 
 @media screen and (max-width: 1024px)
-     .container
+    .container
         max-width: 1024px
         height: initial
         
@@ -196,23 +220,23 @@ html,body
 
 
 @media screen and (max-width: 414px)
+    header
+        height: 70px
+        .logo  
+            left: 50%
+        .search
+            position: absolute
+            left: 50%
+            top: 50%
+            transform: translate(-50%,-50%)
+            color: black
+            input
+                border-bottom: 2px solid black
+            input::-webkit-input-placeholder
+                color: #9B9B9B
     .container
         max-width: 414px
         height: initial
-        header
-            height: 70px
-            .logo  
-                left: 50%
-            .search
-                position: absolute
-                left: 50%
-                top: 50%
-                transform: translate(-50%,-50%)
-                color: black
-                input
-                    border-bottom: 2px solid black
-                input::-webkit-input-placeholder
-                    color: #9B9B9B
         .main
             width: 100%
             .left_column
@@ -231,7 +255,9 @@ html,body
                     h3
                         text-align: center
                     .categorie
-                        transform: translateX(40%)                       
+                        transform: translateX(40%)
+                        display: inline-block
+                     
             .right_column
                 width: 100%
                 padding: 0
