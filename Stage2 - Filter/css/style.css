@@ -1,6 +1,7 @@
 @charset "UTF-8";
 * {
   font-family: 'Jua', sans-serif, '微軟正黑體';
+  user-select: none;
   box-sizing: border-box; }
 
 html, body {
@@ -93,6 +94,8 @@ header {
       vertical-align: top; }
       .container .main .right_column .info {
         margin-left: 20px; }
+        .container .main .right_column .info h3 {
+          font-size: 20px; }
         .container .main .right_column .info ul {
           list-style: none;
           padding: 0; }
@@ -107,7 +110,7 @@ header {
               cursor: pointer;
               font-size: 15px; }
       .container .main .right_column .block {
-        height: 220px;
+        height: auto;
         width: 100%;
         background-color: #fff;
         margin-left: 20px;
@@ -115,12 +118,13 @@ header {
         cursor: pointer; }
         .container .main .right_column .block:hover {
           box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-          transition: 0.3s; }
+          transition: all 0.3s; }
         .container .main .right_column .block .main_img {
-          height: 100%;
+          height: 220px;
           width: 220px;
-          background-color: yellow;
-          display: inline-block; }
+          background-image: url("../tai.jpg");
+          display: inline-block;
+          background-size: cover; }
         .container .main .right_column .block .main_content {
           margin: 0;
           width: calc(100% - 300px);
