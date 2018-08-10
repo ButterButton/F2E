@@ -27,40 +27,14 @@ html(lang="en")
                 .left_column
                     .location
                         h3 Location
-                        select#select
+                        select#select(onchange="locationFilter(this)")
                     .categories
                         h3 Categories
                         .categorie
                             form#form(action="")
-                                input#check1(type="checkbox") 
+                                input#check1(type="checkbox" value="All") 
                                 label(for="check1") All
                                 br
-                                input#check2(type="checkbox")
-                                label(for="check2") 歷史古蹟
-                                br
-                                input#check3(type="checkbox")
-                                label(for="check3") 宗教廟宇
-                                br
-                                input#check4(type="checkbox")
-                                label(for="check4") 在地藝文
-                                br
-                                input#check5(type="checkbox")
-                                label(for="check5") 地方展館
-                                br
-                                input#check6(type="checkbox")
-                                label(for="check6") 戶外運動
-                                br
-                                input#check7(type="checkbox")
-                                label(for="check7") 休閒農漁
-                                br
-                                input#check8(type="checkbox")
-                                label(for="check8") 主題園區
-                                br
-                                input#check9(type="checkbox")
-                                label(for="check9") 公園綠地
-                                br
-                                input#check10(type="checkbox")
-                                label(for="check10") 生態教育
                 #right_column.right_column
                     #info.info                     
                         ul#ul
