@@ -1,6 +1,5 @@
 tainanJson = "../tainanapi.json"
 var arr = new Array()
-
 $(document).ready(function () {
     $.ajax({
         type: "GET",
@@ -22,6 +21,25 @@ $(document).ready(function () {
         }
     })
 })
+// function tagsShow(c) {
+//     $('#ul').remove()
+//     $(':checkbox').each(function () {
+//         if ($(c).prop('checked')) {
+//             var tags = $(c).val()
+//             $('#ul').append('<li>' + tags + '</li>')
+//         }
+//     })
+// }
+function tagsShow(c) {
+    const categoryResult = [...new Set(arr.map(item => JSON.stringify(item.category[0])))].map(item => JSON.parse(item))
+    if ($(c).prop('checked')) {
+        var tags = $(c).val()
+        $('#ul').append('<li>' + tags + '</li>')
+        var result = categoryResult.includes(tags)
+    } else if ($(c).prop('checked', false)) {
+        $('#ul > li').remove()
+    }
+}
 
 function duplicatesRemove() {
     //去除陣列重複物件，先將物件轉為字串比較
@@ -36,12 +54,8 @@ function duplicatesRemove() {
         )
     }
     for (i = 0; i < categoryResult.length; i++) {
-        $('#categorie').append('<input type="checkbox" id="' + 'check' + i + '" value="' + categoryResult[i] + '">' + '</input>' + '<label for="' + 'check' + i + '">' + categoryResult[i] + '</label>' + '<br>')
+        $('#categorie').append('<input type="checkbox"  onclick="tagsShow(this)" id="' + 'check' + i + '" value="' + categoryResult[i] + '">' + '</input>' + '<label for="' + 'check' + i + '">' + categoryResult[i] + '</label>' + '<br>')
     }
-    if ($(':checkbox').prop('checked')) {
-        console.log('test')
-    }
-
     var districtLength = districtResult.length
     $('#info').append('<h3>' + 'Showing ' + arr.length + ' results by…' + '</h3>')
 }
@@ -54,7 +68,6 @@ function duplicatesRemove() {
 //         }
 //     })
 // }
-
 function locationFilter(c) {
     var txt = $('#select :selected').text()
     $('#right_column').empty()
@@ -62,7 +75,6 @@ function locationFilter(c) {
     var locationarr = arr.filter(function (item, index, array) {
         if (txt == item.district) {
             $('#right_column').append('<div class="block"><div class="main_img"></div><div class="main_content"><div class="title"><h3>' + item.name + '</h3></div><div class="brief"><p>' + item.introduction + '</p></div><div class="list"><span>' + item.category[0] + '</span><span>' + item.category[1] + '</span><span>' + item.category[2] + '</span></div><div class="item"><div class="place"><i class="fas fa-map-marker-alt">' + item.district + '</i><span> </span></div><div class="tel"><i class="fas fa-phone"></i><span>' + item.tel + ' </span></div></div></div>')
-            console.log(item.district)
         }
     })
 }
