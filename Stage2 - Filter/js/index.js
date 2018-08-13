@@ -23,11 +23,11 @@ $(document).ready(function () {
     })
 })
 
-
 function duplicatesRemove() {
+    //去除陣列重複物件，先將物件轉為字串比較
     const districtResult = [...new Set(arr.map(item => JSON.stringify(item.district)))].map(item => JSON.parse(item))
     const categoryResult = [...new Set(arr.map(item => JSON.stringify(item.category[0])))].map(item => JSON.parse(item))
-    console.log(categoryResult)
+    // console.log(categoryResult)
     for (i = 0; i < districtResult.length; i++) {
         $('#select').append(
             $('<option>', {
@@ -36,8 +36,12 @@ function duplicatesRemove() {
         )
     }
     for (i = 0; i < categoryResult.length; i++) {
-        $('#form').append('<input type="checkbox" id="' + 'check' + i + 2 + '" value="' + categoryResult[i] + '">' + '</input>' + '<label>' + categoryResult[i] + '</label>' + '<br>')
+        $('#categorie').append('<input type="checkbox" id="' + 'check' + i + '" value="' + categoryResult[i] + '">' + '</input>' + '<label for="' + 'check' + i + '">' + categoryResult[i] + '</label>' + '<br>')
     }
+    if ($(':checkbox').prop('checked')) {
+        console.log('test')
+    }
+
     var districtLength = districtResult.length
     $('#info').append('<h3>' + 'Showing ' + arr.length + ' results by…' + '</h3>')
 }
