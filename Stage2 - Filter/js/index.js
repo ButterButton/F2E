@@ -21,24 +21,15 @@ $(document).ready(function () {
         }
     })
 })
-// function tagsShow(c) {
-//     $('#ul').remove()
-//     $(':checkbox').each(function () {
-//         if ($(c).prop('checked')) {
-//             var tags = $(c).val()
-//             $('#ul').append('<li>' + tags + '</li>')
-//         }
-//     })
-// }
-function tagsShow(c) {
-    const categoryResult = [...new Set(arr.map(item => JSON.stringify(item.category[0])))].map(item => JSON.parse(item))
-    if ($(c).prop('checked')) {
-        var tags = $(c).val()
-        $('#ul').append('<li>' + tags + '</li>')
-        var result = categoryResult.includes(tags)
-    } else if ($(c).prop('checked', false)) {
-        $('#ul > li').remove()
-    }
+
+function tagsShow() {
+    $('#ul>li').remove()
+    $(':checkbox').each(function () {
+        if ($(this).prop('checked')) {
+            var tags = $(this).val()
+            $('#ul').append('<li>' + tags + '</li>')
+        }
+    })
 }
 
 function duplicatesRemove() {
@@ -60,14 +51,6 @@ function duplicatesRemove() {
     $('#info').append('<h3>' + 'Showing ' + arr.length + ' results by…' + '</h3>')
 }
 
-// function categoryFilter() {
-//     $(':checkbox').change(function () {
-//         if (this.checked) {
-//             var val = this.value
-
-//         }
-//     })
-// }
 function locationFilter(c) {
     var txt = $('#select :selected').text()
     $('#right_column').empty()
@@ -78,6 +61,3 @@ function locationFilter(c) {
         }
     })
 }
-
-
-// categoryFilter()
