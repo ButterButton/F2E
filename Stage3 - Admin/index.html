@@ -1,120 +1,42 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Stage3 - admin</title>
-    <link rel='stylesheet prefetch' href='https://use.fontawesome.com/releases/v5.0.13/css/all.css'>
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Jua|Oxygen" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-    <header id='header'>
-        <div class="top">
-            <div class="logo">ShopTime</div>
-            <div class="menu">
-                <a href="">HOME</a>
-                <a href="">ORDERS</a>
-                <a href="">PRODUCT</a>
-            </div>
-            <div class="user">ADMIN</div>
-        </div>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Stage3 - Admin</title>
+    <link rel="stylesheet prefetch" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Jua|Oxygen" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+  </head>
+  <body>
+    <header class="bg-dark">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark" style="padding-left:0"><a class="navbar-brand text-white" style="font-size:24px" href="#">Shoptime</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-5"><a class="nav-item nav-link active text-white" href="#">HOME<span class="sr-only">(current)</span></a><a class="nav-item nav-link text-white" href="#">ORDERS</a><a class="nav-item nav-link text-white" href="#">PRODUCT</a></div>
+          </div>
+        </nav>
+      </div>
     </header>
     <div class="main">
-        <div class="container">
-            <div class="info">
-                <div class="title">OVERVIEW</div>
-                <div class="conditions">
-                    <div class="times">
-                        <p>2018/06/18</p>
-                        <i class="fas fa-angle-right"></i>
-                        <p>2018/06/25</p>
-                    </div>
-                    <div class="species">
-                        <p>Weekly</p>
-                        <i class="fas fa-angle-down"></i>
-                    </div>
-                </div>
+      <div class="container">
+        <h5 class="pt-3">OVERVIEW</h5>
+        <div class="row mt-3">
+          <div class="col-4 bg-light">
+            <div class="view-item"><i class="fas fa-hand-holding-usd"></i>
+              <p class="d-lg-inline-block">TOTAL REVENUE</p>
             </div>
-            <div class="block1">
-                <div class="faceplate">
-                    <i class="fas fa-money-bill">TOTAL REVENUE</i>
-                    <b class="b1">54,540</b>
-                </div>
-                <div class="faceplate">
-                    <i class="fas fa-boxes">TOTAL COST</i>
-                    <b class="b2">12,660</b>
-                </div>
-                <div class="faceplate">
-                    <i class="fas fa-coins">NET INCOME</i>
-                    <b class="b3">41,880</b>
-                </div>
-            </div>
-            <div class="block2">
-                <canvas id="example"></canvas>
-            </div>
-            <div class="block3">
-                <div class="leftlate">
-                    <b class="title">Transaction Website</b>
-                    <div class="list">
-                        <div class="item" style="margin-top: 0">
-                            <span class="fab fa-facebook-square"></span>
-                            <span class="num">4,5836</span>
-                            <span class="fas fa-arrow-up green"></span>
-                            <span class="rate green">20%</span>
-                        </div>
-                        <div class="item">
-                            <span class="fab fa-google"></span>
-                            <span class="num">2,3582</span>
-                            <span class="fas fa-arrow-up green"></span>
-                            <span class="rate green">12%</span>
-                        </div>
-                        <div class="item">
-                            <span class="fab fa-yahoo"></span>
-                            <span class="num">2,489</span>
-                            <span class="fas fa-arrow-down red"></span>
-                            <span class="rate red">15%</span>
-                        </div>
-                        <div class="item">
-                            <span class="fab fa-wordpress"></span>
-                            <span class="num">1,057</span>
-                            <span class="fas fa-arrow-down red"></span>
-                            <span class="rate red">30%</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="rightlate">
-                    <b class="title">Latest Orders</b>
-                    <div class="list">
-                        <div class="item" style="margin-top: 0">
-                            <span class="fab fa-pied-piper-hat" style="font-size: 40px"></span>
-                            <div class="detail">
-                                <b>Hat</b>
-                            </div>
-                           
-                        </div>
-                        <div class="item">
-                            <span class="fas fa-tshirt" style="font-size: 40px "></span>
-                            <div class="detail">
-                                <b>T-shirt</b>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <span class="fas fa-shoe-prints" style="font-size: 40px"></span>
-                            <div class="detail">
-                                <b>Shoes</b>
-                            </div>
-                           
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
+          <div class="col-4 bg-light"></div>
+          <div class="col-4 bg-light"></div>
         </div>
+      </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-    <script src="js/chart.js"></script>
-</body>
-
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"> </script>
+  </body>
 </html>
