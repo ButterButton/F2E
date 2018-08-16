@@ -11,34 +11,45 @@ html(lang="en")
         link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous")
         link(rel="stylesheet", type="text/css" href="css/style.css")
     body
-        header.bg-dark
-            .container
-                nav.navbar.navbar-expand-lg.navbar-dark(style="padding-left:0")
-                    a.navbar-brand.text-white(style="font-size:24px" href='#') Shoptime
-                    button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation")
-                        span.navbar-toggler-icon
-                    #navbarNavAltMarkup.collapse.navbar-collapse
-                        .navbar-nav.ml-5
-                            a.nav-item.nav-link.active.text-white(href='#') HOME
-                                span.sr-only (current)
-                            a.nav-item.nav-link.text-white(href='#') ORDERS
-                            a.nav-item.nav-link.text-white(href='#') PRODUCT
-                            //- a.nav-item.nav-link.text-white(href='#') ADMIN
-        .main
-            .container
-                h5.pt-3 OVERVIEW
-                .row.mt-3
-                    .col-4.bg-light
-                        .view-item
-                            i.fas.fa-hand-holding-usd
-                            p.d-lg-inline-block TOTAL REVENUE
-                    .col-4.bg-light
-                    .col-4.bg-light
-
-
+        //- header.bg-dark
+        //-     .container
+        //-         nav.navbar.navbar-expand-lg.navbar-dark(style="padding-left:0")
+        //-             a.navbar-brand.text-white(style="font-size:24px" href='#') Shoptime
+        //-             button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation")
+        //-                 span.navbar-toggler-icon
+        //-             #navbarNavAltMarkup.collapse.navbar-collapse
+        //-                 .navbar-nav.ml-5
+        //-                     a.nav-item.nav-link.active.text-white(href='#') HOME
+        //-                         span.sr-only (current)
+        //-                     a.nav-item.nav-link.text-white(href='#') ORDERS
+        //-                     a.nav-item.nav-link.text-white(href='#') PRODUCT
+        //-                     //- a.nav-item.nav-link.text-white(href='#') ADMIN
+        //- .main
+        //-     .container
+        //-         h5.pt-3 OVERVIEW
+        //-         .row.mt-3
+        //-             .col-lg-4.col-sm-4.col-12.bg-white
+        //-                 .view-item.text-center
+        //-                     i.fas.fa-hand-holding-usd
+        //-                     p.d-lg-inline-block TOTAL REVENUE
+        //-                 p.text-center.text-success(style="font-size:36px") 54,540
+        //-             .col-lg-4.col-sm-4.col-12.bg-white
+        //-                 .view-item.text-center
+        //-                     i.fas.fa-boxes
+        //-                     p.d-lg-inline-block TOTAL COST
+        //-                 p.text-center.text-danger(style="font-size:36px") 12,660
+        //-             .col-lg-4.col-sm-4.col-12.bg-white
+        //-                 .view-item.text-center
+        //-                     i.fas.fa-money-bill
+        //-                     p.d-lg-inline-block NET INCOME
+        //-                 p.text-center.text-primary(style="font-size:36px") 41,880
+        //-         .row.mt-3
+        //-             .col-12
+        canvas#example
 
         
-
+        script(src="../js/chart.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js")
         script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous")
         script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous")
         script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous")  

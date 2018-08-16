@@ -12,7 +12,7 @@ var myChart = new Chart(ctx, {
             data: [1000, 1200, 600, 1100],
             fill: false,
         }, {
-            label: 'Expenses',   
+            label: 'Expenses',
             lineTension: 0,
             backgroundColor: "#D0021B",
             borderColor: "#D0021B",
@@ -25,7 +25,7 @@ var myChart = new Chart(ctx, {
         scales: {
             yAxes: [{
                 ticks: {
-                    beginAtZero:true
+                    beginAtZero: true
                 }
             }]
         }
